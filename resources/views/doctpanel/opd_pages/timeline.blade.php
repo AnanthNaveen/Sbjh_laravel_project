@@ -23,7 +23,6 @@
 
             .timeline-container::-webkit-scrollbar {
                 display: none;
-                /* Safari, Chrome */
             }
 
             .timeline {
