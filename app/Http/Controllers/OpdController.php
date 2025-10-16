@@ -94,7 +94,10 @@ class OpdController extends Controller
             ],
             'knee' => [],
             'leg' => [],
-            'hand_wrist' => [],
+            'hand_wrist' => [
+                'history_of_feveryes' => 'Yes',
+                'fatigue_yes' => 'Yes',
+            ],
             'shoulder_elbow' => [
                 'Relation_to_trauma' => 'checkbox',
                 'Prior_Treatment_Attempted' => 'Yes',
