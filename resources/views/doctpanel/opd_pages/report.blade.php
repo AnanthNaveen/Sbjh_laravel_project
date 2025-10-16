@@ -198,7 +198,7 @@
 </head>
 <body>
     <div class="nav-buttons d-print-none">
-        <a href="{{ route('report.show', ['regno' => $recordata->regno]) }}" class="btn d-print-none nav-btn">← Back</a>
+        <a href="{{ route('report.show', ['regno' => $recordata->regno]) }}" class="btn d-print-none nav-btn"> Back</a>
         <a href="{{ url('reception/reglist') }}" class="btn d-print-none nav-btn">Home</a>
         <a href="" class="nav-btn d-print-none" onclick="window.print()">Print</a>
     </div>
@@ -819,21 +819,20 @@
                     'onset'                => "onset was <b>:value</b>",
                     'duration'             => "symptoms have been present for <b>:value</b>",
                     'character_pain'       => "pain is described as <b>:value</b>",
-                    'Aggravating_factors'  => "<br>Pain is aggravated by <b>:value</b>",
+                    'Aggravating_factors'  => "Pain is aggravated by <b>:value</b>",
                     'Aggravating_factors_other' => "additional details reported as <b>:value</b>",
                     'relieving_factors'    => "Pain is relieved by <b>:value</b>",
                     'relieving_factors_others' => "additional details reported as <b>:value</b>",
                     'relation_to_trauma'   => "had a history of trauma <b>:value</b>",
-                    'history_of_feveryes'   => " <br>The patient had a fever <b>:value</b>",
-                    'history_fever_yes'    => "with a <b>:value</b>",
-                    'history_of_feverno'   => "<br>The patient did not have any fever",
+                    'history_of_fever'   => " had a fever <b>:value</b>",
+                    'History_of_fever'   => "the patient did not have any fever",
                     'pain_severity'        => "reports a pain severity of <b>:value</b>",
                     'pain_worst'           => "Pain is worst in <b>:value</b>",
                     'treatment_attempted'  => "previously attempted <b>:value</b>",
                     'activities_daily_living' => "reports <b>:value</b>",
                     'patient_complaints_past' => " had similar complaints in the past <b>:value</b>",
-                    'fatigue'              => "Report as <b>:value</b> ",
-                    'fatigue_yes'          => "has <b>:value</b>",
+                    'Fatigue'              => "report as <b>:value</b> ",
+                    'fatigue'          => "has <b>:value</b> fatigue",
                     'bladder'                => "has <b>:value</b> bladder symptoms",
                     'bowel'                 => "has <b>:value</b> bowel symptoms",
                     'fever'                 => "has <b>:value</b> fever",

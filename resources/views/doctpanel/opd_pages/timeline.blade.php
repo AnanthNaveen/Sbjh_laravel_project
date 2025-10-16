@@ -360,7 +360,10 @@
                                         // 'Social_History'      => 'NKDA',
                                         // 'Past_Medical_History'=> 'None',
                                     ],
-                                    'hand_wrist' => [],
+                                    'hand_wrist' => [
+                                        'history_of_feveryes' => 'Yes',
+                                        'fatigue_yes' => 'Yes',
+                                    ],
                                     'shoulder_elbow' => [
                                         'Relation_to_trauma' => 'checkbox',
                                         'Prior_Treatment_Attempted' => 'Yes',
