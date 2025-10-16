@@ -408,12 +408,12 @@
                 <div class="checkbox-group mt-3" data-group="History Of Fever" data-exclusive="true">
                     <div class="checkbox-item" data-title="Chief Complaints" >
                         <label for="" class="label1">Any H/O Of Fever:</label>
-                        <input type="checkbox" name="history_of_feverno" value="No" data-target="#input4">
+                        <input type="checkbox" name="History_of_fever" value="No" data-target="#input4">
                         <label for="">No</label>
                         {{-- <input type="text" class="inline-input" name="history_fever_no" id="input4" disabled> --}}
                         <input type="checkbox" name="history_of_feveryes" value="Yes" data-target="#input3">
                         <label for="">Yes</label>
-                        <input type="text" class="inline-input" name="history_fever_yes" id="input3" disabled>
+                        <input type="text" class="inline-input" name="history_of_fever" id="input3" disabled>
                     </div>
                 </div>
                 <div class="checkbox-group mt-3" data-title="Chief Complaints">
@@ -451,13 +451,13 @@
                     <div class="checkbox-group" data-group="Other Complaint" data-title="Other Complaint" data-exclusive="true">
                         <div class="checkbox-item">
                             <label>Fatigue:</label>
-                            <input type="checkbox" name="fatigue" value="No - fatigue">
+                            <input type="checkbox" name="fatigue" value="No">
                             <label for="">No</label>
                         </div>
                         <div class="checkbox-item">
-                            <input type="checkbox" name="fatigue" value="Yes" data-target="#input5">
+                            <input type="checkbox" name="fatigue_yes" value="Yes" data-target="#input5">
                             <label for="">Yes</label>
-                            <input type="text" name="fatigue_yes" id="input5" disabled>
+                            <input type="text" name="Fatigue" id="input5" disabled>
                         </div>
                       
                     </div>

@@ -6,19 +6,15 @@
                 color: #2c3e50;
                 margin-bottom: 20px;
                 padding-bottom: 10px;
-                /* border-bottom: 2px solid #4ecdc4; */
-                border-bottom: 2px solid #418a68;
-                /* display: inline-block; */
+                border-bottom: 2px solid #418a68; 
             }
 
             /* Horizontal Timeline Styles */
             .timeline-container {
                 width: 100%;
                 background: white;
-                border-radius: 8px;
-                /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+                border-radius: 8px; 
                 padding: 25px;
-                /* margin-top: 20px; */
                 overflow-x: auto;
                 position: relative;
                 scrollbar-width: none;
@@ -27,7 +23,6 @@
 
             .timeline-container::-webkit-scrollbar {
                 display: none;
-                /* Safari, Chrome */
             }
 
             .timeline {
@@ -358,7 +353,10 @@
                                         // 'Social_History'      => 'NKDA',
                                         // 'Past_Medical_History'=> 'None',
                                     ],
-                                    'hand_wrist' => [],
+                                    'hand_wrist' => [
+                                        'history_of_feveryes' => 'Yes',
+                                        'fatigue_yes' => 'Yes',
+                                    ],
                                     'shoulder_elbow' => [
                                         'Relation_to_trauma' => 'checkbox',
                                         'Prior_Treatment_Attempted' => 'Yes',
