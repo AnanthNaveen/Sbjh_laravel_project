@@ -36,7 +36,7 @@ class OpdController extends Controller
         $patDetails = Opd::select('REG_NO', 'PATIENT_NAME', 'ptype','SEX','age')->where('REG_NO', $regno)->first();
         $allergy_data = DB::table('allergy')->where('regno', $regno)->pluck('allergy');
 
-        $records = Opdpart::select('created_at','type','id','name')
+        $records = Opdpart::select('created_at','type','id','name','data')
         ->where('regno', $regno)
         ->orderBy('created_at', 'asc')
         ->get();// here u have used data as array in the model so it will be automatically converted into php array

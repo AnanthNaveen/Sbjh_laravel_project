@@ -315,10 +315,8 @@
                         </div>
                         <div class="modal-body">
                             @php
-                                $recordata = \App\Models\Opdpart::select('data', 'type')
-                                    ->where('id', $record->id)
-                                    ->first();
-                                $datas = $recordata->data ?? [];
+                               $datas = $record->data ?? [];
+                                $type = $record->type;
                                 $grouped = [];
 
                                 $removeLists = [
@@ -372,7 +370,7 @@
                                     // default (if no type matched)
                                 ];
                                 $not_table_spineDeformity = true;
-                                $removeList = $removeLists[$recordata->type];
+                                $removeList = $removeLists[$record->type];
                                 foreach ($datas as $key => $value) {
                                     $title = $value['title'] ?? '';
                                     $valStr = implode(', ', $value['values'] ?? []);

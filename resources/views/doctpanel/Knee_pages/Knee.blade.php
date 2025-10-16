@@ -1833,7 +1833,7 @@
         if (!json) return;
 
         $.ajax({
-            url: '{{ route('save.knee.details') }}',
+            url: '{{ route('save.parts.details') }}',
             type: 'POST',
             data: JSON.stringify(json),
             contentType: 'application/json',

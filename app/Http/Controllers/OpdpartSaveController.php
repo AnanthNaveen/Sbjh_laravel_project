@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Opdpart;
 use Illuminate\Http\Request;
 
-class OpdkneeController extends Controller
+class OpdpartSaveController extends Controller
 {
     public function store(Request $request)
 {
@@ -33,7 +33,7 @@ class OpdkneeController extends Controller
         );
 
         // Check if a record exists for the same regno and today's date
-        $existing = Opdpart::where('regno', $validated['regno'])->where('type','knee')
+        $existing = Opdpart::where('regno', $validated['regno'])->where('type',$validated['type'])
             ->whereDate('created_at', now()->toDateString())
             ->first();
 

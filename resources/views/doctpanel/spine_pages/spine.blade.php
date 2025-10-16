@@ -1348,7 +1348,7 @@ $regnos= optional($patDetails)->REG_NO;
         if (!json) return;
 
         $.ajax({
-            url: '{{ route('save.spine.details') }}',
+            url: '{{ route('save.parts.details') }}',
             type: 'POST',
             data: JSON.stringify(json),
             contentType: 'application/json',
