@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 class OpdpartSaveController extends Controller
 {
     public function store(Request $request)
-{
-    
-    $json = $request->json()->all();
-
+    {
+        $json = $request->json()->all();
         $validated = validator($json, [
             'name'       => 'required|string',
             'age'        => 'required|string',

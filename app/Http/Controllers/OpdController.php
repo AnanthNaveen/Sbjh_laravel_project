@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;   
-use App\Models\Opd;      
+
+use Illuminate\Http\Request;
+use App\Models\Opd;
 use App\Models\Opdpart;
 use Illuminate\Support\Facades\DB;
- 
+
 use Carbon\Carbon;
 
 class OpdController extends Controller
@@ -14,55 +15,53 @@ class OpdController extends Controller
     {
         $records = null;
         $date = $request->input('rdate'); // expected in dd-mm-yyyy or whatever format your input gives
-        if (!$date)
-        {
+        if (!$date) {
             $date = \Carbon\Carbon::now()->format('d-m-Y'); // default to today in dd-mm-yyyy
         }
-        if ($date)
-        {
+        if ($date) {
             $formattedDate = \Carbon\Carbon::createFromFormat('d-m-Y', $date)->format('Y-m-d');
-            $records = Opd::select('REG_NO', 'PATIENT_NAME', 'CONSULTANT', 'ptype', 'cur_date')->whereDate('cur_date', $formattedDate)->where('CONSULTANT', 'Dr.SIVAMURUGAN')->get();   
+            $records = Opd::select('REG_NO', 'PATIENT_NAME', 'CONSULTANT', 'ptype', 'cur_date')->whereDate('cur_date', $formattedDate)->where('CONSULTANT', 'Dr.SIVAMURUGAN')->get();
         }
-        return view('doctpanel/opd_pages.indexopd', compact('records', 'date'));   
-        
+        return view('doctpanel/opd_pages.indexopd', compact('records', 'date'));
     }
-    
+
     public function opdOldNewData(string $regno)
     {
-       
-       $patDetails = null;
-       if($regno)
-       {
-        $patDetails = Opd::select('REG_NO', 'PATIENT_NAME', 'ptype','SEX','age')->where('REG_NO', $regno)->first();
-        $allergy_data = DB::table('allergy')->where('regno', $regno)->pluck('allergy');
 
-        $records = Opdpart::select('created_at','type','id','name','data')
-        ->where('regno', $regno)
-        ->orderBy('created_at', 'asc')
-        ->get();// here u have used data as array in the model so it will be automatically converted into php array
-        //That means Laravel will automatically decode the data JSON into an array every time you fetch it
-        // from the database — so you don’t need any json_decode() in your controller or blade anymore.
-        
+        $patDetails = null;
+        if ($regno) {
+            $patDetails = Opd::select('REG_NO', 'PATIENT_NAME', 'ptype', 'SEX', 'age')->where('REG_NO', $regno)->first();
+            $allergy_data = DB::table('allergy')->where('regno', $regno)->pluck('allergy');
 
-        return view('doctpanel/opd_pages.opd_oldnew', compact('patDetails', 'regno','allergy_data','records')); 
-       }
+            $records = Opdpart::select('created_at', 'type', 'id', 'name', 'data')
+                ->where('regno', $regno)
+                ->orderBy('created_at', 'asc')
+                ->get(); // here u have used data as array in the model so it will be automatically converted into php array
+            //That means Laravel will automatically decode the data JSON into an array every time you fetch it
+            // from the database — so you don’t need any json_decode() in your controller or blade anymore.
+
+
+            return view('doctpanel/opd_pages.opd_oldnew', compact('patDetails', 'regno', 'allergy_data', 'records'));
+        }
     }
 
-    public function report($regno){
-      $reports = Opdpart::select('created_at','type','id','name','regno','consultant')
-        ->where('regno', $regno)
-        ->orderBy('created_at', 'desc')
-        ->get();
-        return view('doctpanel/opd_pages.report_list',compact('reports'));
+    public function report($regno)
+    {
+        $reports = Opdpart::select('created_at', 'type', 'id', 'name', 'regno', 'consultant')
+            ->where('regno', $regno)
+            ->orderBy('created_at', 'desc')
+            ->get();
+        return view('doctpanel/opd_pages.report_list', compact('reports'));
     }
 
 
-    public function show($id){
+    public function show($id)
+    {
 
         $recordata = Opdpart::where('id', $id)->first();
-        $datas = $recordata->data ?? [];     
+        $datas = $recordata->data ?? [];
         $grouped = [];
-        
+
         $removeLists = [
             'spine' => [
                 'Aggravating_factors' => 'None',
@@ -75,7 +74,7 @@ class OpdController extends Controller
                 'Posture'             => 'erect',
                 'ROM'                 => 'Restricted',
                 'sensation'           => 'Decreased',
-                'Past_Medical_History'=> 'None',
+                'Past_Medical_History' => 'None',
                 'Current_meds_none'   =>  'none',
             ],
             'spinal_deformity' => [
@@ -105,7 +104,7 @@ class OpdController extends Controller
                 'anteriorly' => 'checkbox',
                 'LateralAspect' => 'checkbox',
                 'posteriorly' => 'checkbox',
-            ], 
+            ],
         ];
         $removeList = $removeLists[$recordata->type];
         foreach ($datas as $key => $value) {
@@ -121,6 +120,5 @@ class OpdController extends Controller
             'grouped' => $grouped,
             'recordata' => $recordata,
         ]);
-        }
+    }
 }
-?>

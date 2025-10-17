@@ -5,7 +5,6 @@
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
 <style>
-
     .form-group {
         margin-bottom: 15px;
     }
@@ -188,11 +187,13 @@
         border: 2px solid red !important;
         outline: none !important;
     }
-    .modified_table{
+
+    .modified_table {
         border-bottom: none;
         background: none;
         box-shadow: none;
     }
+
     .modified_table td {
         border-bottom: none;
     }
@@ -211,6 +212,7 @@
             grid-template-columns: 1fr;
             gap: 20px;
         }
+
         .checkbox-group {
             flex-direction: column;
             gap: 10px;
@@ -233,12 +235,12 @@
                 </div>
                 <div class="form-group" data-title="History">
                     <h5><span><img src="{{ asset('Image/history-book-2.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> History:</h5>
+                                style="width: 35px;height:35px;"></span> History:</h5>
                     <label for="" class="label1">1st Noticed at Age:</label>
                     <input type="text" placeholder="Describe 1st Noticed at" name="1st_Noticed_at_Age">
                 </div>
                 <h5><span><img src="{{ asset('Image/muscle-pain-2.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Pain:</h5>
+                            style="width: 35px;height:35px;"></span> Pain:</h5>
                 <div class="checkbox-group" data-title="Pain">
                     <div class="checkbox-item">
                         <input type="checkbox" name="Pain" value="None">
@@ -254,11 +256,12 @@
                     <div class="form-group">
                         <h6>Intensity:</h6>
                         <label for="" class="label1">Pain Rate(0 - 10):</label>
-                        <input type="text" class="inline-input" placeholder="Describe Pain Rate" name="Intensity_Pain_Rate">
+                        <input type="text" class="inline-input" placeholder="Describe Pain Rate"
+                            name="Intensity_Pain_Rate">
                     </div>
                     <div class="form-group">
                         <label class="">Duration:</label>
-                        <textarea  placeholder="Describe Duration" name="Intensity_Duration"></textarea>
+                        <textarea placeholder="Describe Duration" name="Intensity_Duration"></textarea>
                     </div>
                 </div>
                 <div class="form-group" data-group="Progression" data-exclusive="true" data-title="Pain">
@@ -301,7 +304,8 @@
                             <input type="checkbox" name="Weakness" value="Unsteady_gait" data-target="#input2">
                             <label for="">Unsteady gait</label>
                         </div>
-                        <input type="text" placeholder="Specify Unsteady gait" id="input2" disabled name="Weakness_Unsteady_gait">
+                        <input type="text" placeholder="Specify Unsteady gait" id="input2" disabled
+                            name="Weakness_Unsteady_gait">
                     </div>
                 </div>
                 <div class="form-group" data-group="Sensory" data-title="Pain">
@@ -319,7 +323,8 @@
                             <input type="checkbox" name="Sensory" value="paresthesia" data-target="#input3">
                             <label for="">paresthesia</label>
                         </div>
-                        <input type="text" placeholder="Specify paresthesia" id="input3" name="Sensory_paresthesia" disabled>
+                        <input type="text" placeholder="Specify paresthesia" id="input3"
+                            name="Sensory_paresthesia" disabled>
                     </div>
                 </div>
                 <div class="form-group" data-group="Bladder" data-title="Pain">
@@ -336,25 +341,27 @@
                     </div>
                 </div>
                 <h5><span><img src="{{ asset('Image/syringe.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Treatment So For:</h5>
-               <div class="checkbox-item" data-title="Treatment So For">
+                            style="width: 35px;height:35px;"></span> Treatment So For:</h5>
+                <div class="checkbox-item" data-title="Treatment So For">
                     <input type="checkbox" name="Treatment_so_for" value="None">
                     <label for="">None</label>
                 </div>
                 <div class="checkbox-item mt-3" data-title="Treatment So For">
                     <div data-group="Bracing/Casting">
                         <div class="checkbox-item">
-                            <input type="checkbox" name="BracingCasting" value="Bracing_Casting" data-target="#input5">
+                            <input type="checkbox" name="BracingCasting" value="Bracing_Casting"
+                                data-target="#input5">
                             <label for="">Bracing/Casting</label>
                         </div>
-                        <textarea  placeholder="Describe Bracing/Casting" id="input5" disabled name="Bracing_Casting"></textarea>
+                        <textarea placeholder="Describe Bracing/Casting" id="input5" disabled name="Bracing_Casting"></textarea>
                     </div>
                     <div>
                         <div class="checkbox-item" data-group="Physiotherapy">
-                            <input type="checkbox" name="Physiotherapys" value="Physiotherapy" data-target="#input6">
+                            <input type="checkbox" name="Physiotherapys" value="Physiotherapy"
+                                data-target="#input6">
                             <label for="">Physiotherapy</label>
                         </div>
-                        <textarea  placeholder="Describe Physiotherapy" id="input6" disabled name="Physiotherapy"></textarea>
+                        <textarea placeholder="Describe Physiotherapy" id="input6" disabled name="Physiotherapy"></textarea>
                     </div>
                 </div>
             </div>
@@ -368,34 +375,36 @@
                         <input type="checkbox" name="Past_Medical_History" value="None">
                         <label for="">None</label>
                     </div>
-                    <textarea  placeholder="Describe Past Medical History" style="max-width: 65%;height:65px;" name="Past_Medical_History_Description"></textarea>
+                    <textarea placeholder="Describe Past Medical History" style="max-width: 65%;height:65px;"
+                        name="Past_Medical_History_Description"></textarea>
                 </div>
                 <div data-title="Past Surgical History">
                     <h5><span><img src="{{ asset('Image/surgeon.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Past Surgical History:</h5>
-                    <div class="checkbox-item" >
+                                style="width: 35px;height:35px;"></span> Past Surgical History:</h5>
+                    <div class="checkbox-item">
                         <input type="checkbox" name="Past_Surgical_History" value="None">
                         <label for="">None</label>
                     </div>
-                    <textarea  placeholder="Describe Past Surgical History" style="max-width: 65%;height:65px;" name="Past_Surgical_History_Description"></textarea>
+                    <textarea placeholder="Describe Past Surgical History" style="max-width: 65%;height:65px;"
+                        name="Past_Surgical_History_Description"></textarea>
                 </div>
                 <div data-title="Current MEDs">
                     <h5><span><img src="{{ asset('Image/capsules.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Current MEDs:</h5>
+                                style="width: 35px;height:35px;"></span> Current MEDs:</h5>
                     <div class="checkbox-item">
                         <input type="checkbox" name="Current_MEDs" value="None">
                         <label for="">None</label>
                     </div>
-                    <textarea  placeholder="Describe Current MEDs" style="max-width: 65%;height:65px;" name="Current_MEDs_Description"></textarea>
+                    <textarea placeholder="Describe Current MEDs" style="max-width: 65%;height:65px;" name="Current_MEDs_Description"></textarea>
                 </div>
                 <div data-title="Allergies">
                     <h5><span><img src="{{ asset('Image/rash.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Allergies:</h5>
+                                style="width: 35px;height:35px;"></span> Allergies:</h5>
                     <div class="checkbox-item">
                         <input type="checkbox" name="Allergies" value="NKDA">
                         <label for="">NKDA</label>
                     </div>
-                    <textarea  placeholder="Describe Current NKDA" style="max-width: 65%;height:65px;" name="Allergies_Description"></textarea>
+                    <textarea placeholder="Describe Current NKDA" style="max-width: 65%;height:65px;" name="Allergies_Description"></textarea>
                 </div>
                 <div data-title="Family History">
                     <h6 class="subsection">Family History</h6>
@@ -413,7 +422,8 @@
                                 <label for="">Non-consanguity</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" name="Non-consanguity_checkbox" value="checkbox" data-target="#input7">
+                                <input type="checkbox" name="Non-consanguity_checkbox" value="checkbox"
+                                    data-target="#input7">
                                 <input type="text" disabled id="input7" name="Non-consanguity">
                             </div>
                         </div>
@@ -426,7 +436,8 @@
                                 <label for="">Normal</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" name="Siblings_checkbox" value="checkbox" data-target="#input19">
+                                <input type="checkbox" name="Siblings_checkbox" value="checkbox"
+                                    data-target="#input19">
                                 <input type="text" disabled id="input19" name="Siblings_Description">
                             </div>
                         </div>
@@ -446,7 +457,7 @@
                 </div>
                 <div data-title="Development">
                     <h5><span><img src="{{ asset('Image/professional-development.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Development:</h5>
+                                style="width: 35px;height:35px;"></span> Development:</h5>
                     <div class="checkbox-group" data-group="Development" data-exclusive="true">
                         <div class="checkbox-item">
                             <input type="checkbox" name="Development" value="Normal">
@@ -456,7 +467,8 @@
                             <input type="checkbox" name="Development" value="Delayed" data-target="#input10">
                             <label for="">Delayed</label>
                         </div>
-                        <input type="text" placeholder="Specify delayed" disabled id="input10" name="Development_Delayed">
+                        <input type="text" placeholder="Specify delayed" disabled id="input10"
+                            name="Development_Delayed">
                     </div>
                     <div class="form-group">
                         <label for="" class="label1">Learning disability:</label>
@@ -472,11 +484,11 @@
                         <textarea placeholder="Describe Total Dislocations" name="Onset_of_Menses"></textarea>
                     </div>
                 </div>
-                
-                
+
+
                 <div data-title="Social History">
                     <h5><span><img src="{{ asset('Image/network.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Social History:</h5>
+                                style="width: 35px;height:35px;"></span> Social History:</h5>
                     <div class="checkbox-group" data-group="Social History">
                         <div class="checkbox-item">
                             <input type="checkbox" name="Social_History" value="School">
@@ -492,7 +504,7 @@
                         </div>
                         <input type="text" placeholder="Specify Others" disabled id="input11" name="Others">
                     </div>
-                </div>    
+                </div>
 
             </div>
         </div>
@@ -502,7 +514,7 @@
             <div class="col">
                 <div data-title="Physical Examination">
                     <h5><span><img src="{{ asset('Image/examination-2.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Physical Examination:</h5>
+                                style="width: 35px;height:35px;"></span> Physical Examination:</h5>
                     <div class="checkbox-item">
                         <div class="checkbox-item">
                             <label for="">Height:</label>
@@ -517,8 +529,7 @@
                             <input type="text" style="width: 65px;" name="Arm_Span">
                         </div>
                     </div>
-                    <h6 sty
-                    le="margin-top: 10px;">Gait:</h6>
+                    <h6 sty le="margin-top: 10px;">Gait:</h6>
                     <div class="checkbox-item">
                         <input type="checkbox" name="Gait" value="Normal">
                         <label for="">normal</label>
@@ -565,13 +576,14 @@
                                 <input type="checkbox" value="paraspinal" name="Tenderness" data-target="#input12">
                                 <label for="">paraspinal</label>
                             </div>
-                            <input type="text" placeholder="Specify paraspinal" disabled id="input12" name="paraspinal">
+                            <input type="text" placeholder="Specify paraspinal" disabled id="input12"
+                                name="paraspinal">
                         </div>
                     </div>
                 </div>
                 <div data-title="Trunk Exam">
                     <h5><span><img src="{{ asset('Image/test.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Trunk Exam:</h5>
+                                style="width: 35px;height:35px;"></span> Trunk Exam:</h5>
                     <div class="checkbox-group">
                         <div class="checkbox-item">
                             <input type="checkbox" name="Trunk_Exam" value="Normal">
@@ -598,10 +610,10 @@
                             <label for="">Lumbar hyperlordosis</label>
                         </div>
                     </div>
-                </div>  
+                </div>
                 <div data-title="Adams Forward Bend">
                     <h5><span><img src="{{ asset('Image/standing.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Adams Forward Bend:</h5>
+                                style="width: 35px;height:35px;"></span> Adams Forward Bend:</h5>
                     <table style="width: 50%;" class="modified_table">
                         <tbody>
                             <tr data-group="High_Thoracic_prominence" data-exclusive="true">
@@ -664,11 +676,11 @@
                                     </div>
                                 </td>
                             </tr>
-                           
+
                         </tbody>
                     </table>
                 </div>
-               
+
                 <h5><span><img src="{{ asset('Image/therapy.png') }}" alt=""
                             style="width: 35px;height:35px;"></span> ROM:</h5>
                 <div class="checkbox-group" data-title="ROM" data-group="ROM" data-exclusive="true">
@@ -690,31 +702,33 @@
                 <div style="display: flex;gap:10px; flex-wrap: wrap;" data-title="Flexibility Tests">
                     <div data-group="Push prone test">
                         <div class="checkbox-item">
-                           <input type="checkbox" data-target="#input13" name="Pushprone_test" value="checkbox">
-                           <label for="">Push prone test</label>
-                       </div>
-                       <textarea  placeholder="Describe Push prone test" disabled id="input13" name="Push_prone_test"></textarea>
+                            <input type="checkbox" data-target="#input13" name="Pushprone_test" value="checkbox">
+                            <label for="">Push prone test</label>
+                        </div>
+                        <textarea placeholder="Describe Push prone test" disabled id="input13" name="Push_prone_test"></textarea>
                     </div>
                     <div data-group="Suspension">
                         <div class="checkbox-item">
-                           <input type="checkbox"  data-target="#input14" name="Suspension(Traction)" value="checkbox">
-                           <label for="">Suspension (Traction)</label>
-                       </div>
-                       <textarea  placeholder="Describe Suspension (Traction)" disabled id="input14" name="Suspension_(Traction)"></textarea>
+                            <input type="checkbox" data-target="#input14" name="Suspension(Traction)"
+                                value="checkbox">
+                            <label for="">Suspension (Traction)</label>
+                        </div>
+                        <textarea placeholder="Describe Suspension (Traction)" disabled id="input14" name="Suspension_(Traction)"></textarea>
                     </div>
                     <div data-group="Bending">
                         <div class="checkbox-item">
-                           <input type="checkbox"  data-target="#input15" name="Bendings" value="checkbox">
-                           <label for="">Bending</label>
-                       </div>
-                       <textarea  placeholder="Describe Bending" disabled id="input15" name="Bending"></textarea>
+                            <input type="checkbox" data-target="#input15" name="Bendings" value="checkbox">
+                            <label for="">Bending</label>
+                        </div>
+                        <textarea placeholder="Describe Bending" disabled id="input15" name="Bending"></textarea>
                     </div>
                     <div data-group="Prone hyperextension test">
                         <div class="checkbox-item">
-                           <input type="checkbox" data-target="#input16" name="Pronehyperextension_test" value="checkbox">
-                           <label for="">Prone hyperextension test</label>
-                       </div>
-                       <textarea  placeholder="Describe Prone hyperextension test" disabled id="input16" name="Prone_hyperextension_test"></textarea>
+                            <input type="checkbox" data-target="#input16" name="Pronehyperextension_test"
+                                value="checkbox">
+                            <label for="">Prone hyperextension test</label>
+                        </div>
+                        <textarea placeholder="Describe Prone hyperextension test" disabled id="input16" name="Prone_hyperextension_test"></textarea>
                     </div>
                 </div>
 
@@ -722,7 +736,7 @@
             <div class="col">
                 <div data-title="Motor Strength">
                     <h5><span><img src="{{ asset('Image/development-2.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Motor Strength:</h5>
+                                style="width: 35px;height:35px;"></span> Motor Strength:</h5>
                     <div class="checkbox-item">
                         <input type="checkbox" name="Motor_Strength" value="Normal">
                         <label for="">Normal</label>
@@ -796,23 +810,25 @@
                 </div>
                 <div data-title="Sensations">
                     <h5><span><img src="{{ asset('Image/sensory-2.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Sensations:</h5>
+                                style="width: 35px;height:35px;"></span> Sensations:</h5>
                     <div class="checkbox-item" data-group="Sensations">
                         <input type="checkbox" name="Sensations" value="Intact" data-target="#input17">
                         <label for="">Intact</label>
                     </div>
-                    <textarea  placeholder="Describe Sensations Intact" id="input17" name="Sensations_Intact" disabled></textarea>
+                    <textarea placeholder="Describe Sensations Intact" id="input17" name="Sensations_Intact" disabled></textarea>
                 </div>
 
                 <table class="modified_table" data-title="Sensations">
                     <tbody>
                         <tr>
                             <td>Hoffman:</td>
-                            <td><input type="text" class="inline-input" name="Hoffman" placeholder="Describe Hoffman" style="width:40%;"></td>
+                            <td><input type="text" class="inline-input" name="Hoffman"
+                                    placeholder="Describe Hoffman" style="width:40%;"></td>
                         </tr>
                         <tr>
                             <td>Basinski:</td>
-                            <td><input type="text" class="inline-input" name="Basinski" placeholder="Describe Basinski" style="width:40%;"></td>
+                            <td><input type="text" class="inline-input" name="Basinski"
+                                    placeholder="Describe Basinski" style="width:40%;"></td>
                         </tr>
                         <tr>
                             <td>SLR/FST:</td>
@@ -820,7 +836,8 @@
                                 <div class="checkbox-item">
                                     <input type="checkbox" name="SLR-FST" value="free">
                                     <label for="">Free</label>
-                                    <input type="text" placeholder="Specify SLR/FST" style="width:40%;" name="SLR/FST_Free">
+                                    <input type="text" placeholder="Specify SLR/FST" style="width:40%;"
+                                        name="SLR/FST_Free">
                                 </div>
                             </td>
                         </tr>
@@ -830,7 +847,8 @@
                                 <div class="checkbox-item">
                                     <input type="checkbox" name="PULSE" value="Normal">
                                     <label for="">Normal</label>
-                                    <input type="text" placeholder="Specify Pulse" style="width:40%;" name="Pulse_Description">
+                                    <input type="text" placeholder="Specify Pulse" style="width:40%;"
+                                        name="Pulse_Description">
                                 </div>
                             </td>
                         </tr>
@@ -840,9 +858,11 @@
                                 <div class="checkbox-item" data-group="HIP_ROM" data-exclusive="true">
                                     <input type="checkbox" name="HIP_ROM" value="Normal">
                                     <label for="">Normal</label>
-                                    <input type="checkbox" name="HIP_ROM" value="Thomas_test" data-target="#input18">
+                                    <input type="checkbox" name="HIP_ROM" value="Thomas_test"
+                                        data-target="#input18">
                                     <label for="">Thomas test</label>
-                                    <input type="text" id="input18" placeholder="Specify Thomas test" style="width:40%;" name="Thomas_Test">
+                                    <input type="text" id="input18" placeholder="Specify Thomas test"
+                                        style="width:40%;" name="Thomas_Test">
                                 </div>
                             </td>
                         </tr>
@@ -852,7 +872,8 @@
                                 <div class="checkbox-item">
                                     <input type="checkbox" name="KNEE_ROM" value="Normal">
                                     <label for="">Normal</label>
-                                    <input type="text" placeholder="Specify KNEE ROM" style="width:40%;" name="Knee_ROM">
+                                    <input type="text" placeholder="Specify KNEE ROM" style="width:40%;"
+                                        name="Knee_ROM">
                                 </div>
                             </td>
                         </tr>
@@ -924,7 +945,8 @@
                                 <label for="">Hair/ Skin pigmentation:</label>
                             </td>
                             <td>
-                                <div class="checkbox-group" data-group="Hair/Skin_pigmentation" data-exclusive="true">
+                                <div class="checkbox-group" data-group="Hair/Skin_pigmentation"
+                                    data-exclusive="true">
                                     <div class="checkbox-item">
                                         <input type="checkbox" name="Hair/Skin_pigmentation" value="Yes">
                                         <label for="">Y</label>
@@ -1026,7 +1048,8 @@
                                 <label for="">Anterior chest deformity:</label>
                             </td>
                             <td>
-                                <div class="checkbox-group" data-group="Anterior_chest_deformity" data-exclusive="true">
+                                <div class="checkbox-group" data-group="Anterior_chest_deformity"
+                                    data-exclusive="true">
                                     <div class="checkbox-item">
                                         <input type="checkbox" name="Anterior_chest_deformity" value="No">
                                         <label for="">N</label>
@@ -1058,27 +1081,27 @@
                             </td>
                             <td>
                                 <div class="checkbox-group" data-group="Tanner_stage" data-exclusive="true">
-                                <div class="checkbox-item">
-                                    <input type="checkbox" name="Tanner_stage" value="1">
-                                    <label for="">1</label>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="Tanner_stage" value="1">
+                                        <label for="">1</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="Tanner_stage" value="2">
+                                        <label for="">2</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="Tanner_stage" value="3">
+                                        <label for="">3</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="Tanner_stage" value="4">
+                                        <label for="">4</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" name="Tanner_stage" value="5">
+                                        <label for="">5</label>
+                                    </div>
                                 </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" name="Tanner_stage" value="2">
-                                    <label for="">2</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" name="Tanner_stage" value="3">
-                                    <label for="">3</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" name="Tanner_stage" value="4">
-                                    <label for="">4</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" name="Tanner_stage" value="5">
-                                    <label for="">5</label>
-                                </div>
-                            </div>
                             </td>
                         </tr>
                         <tr>
@@ -1086,7 +1109,7 @@
                                 <label for="">Axillary hair:</label>
                             </td>
                             <td>
-                                 <div class="checkbox-group" data-group="Axillary_hair" data-exclusive="true">
+                                <div class="checkbox-group" data-group="Axillary_hair" data-exclusive="true">
                                     <div class="checkbox-item">
                                         <input type="checkbox" name="Axillary_hair" value="Yes">
                                         <label for="">Y</label>
@@ -1104,7 +1127,7 @@
                                 <label for="">Breasts development:</label>
                             </td>
                             <td>
-                                 <div class="checkbox-group" data-group="Breasts_development" data-exclusive="true">
+                                <div class="checkbox-group" data-group="Breasts_development" data-exclusive="true">
                                     <div class="checkbox-item">
                                         <input type="checkbox" name="Breasts_development" value="Yes">
                                         <label for="">Y</label>
@@ -1122,7 +1145,7 @@
                                 <label for="">Pubic Hair:</label>
                             </td>
                             <td>
-                                 <div class="checkbox-group" data-group="Pubic_Hair" data-exclusive="true">
+                                <div class="checkbox-group" data-group="Pubic_Hair" data-exclusive="true">
                                     <div class="checkbox-item">
                                         <input type="checkbox" name="Pubic_Hair" value="Yes">
                                         <label for="">Y</label>
@@ -1140,7 +1163,7 @@
                                 <label for="">Other MSK findings:</label>
                             </td>
                             <td>
-                                 <div class="checkbox-group" data-group="Other_MSK_findings" data-exclusive="true">
+                                <div class="checkbox-group" data-group="Other_MSK_findings" data-exclusive="true">
                                     <div class="checkbox-item">
                                         <input type="checkbox" name="Other_MSK_findings" value="Yes">
                                         <label for="">Y</label>
@@ -1158,7 +1181,7 @@
                                 <label for="">Foot abnormality:</label>
                             </td>
                             <td>
-                                 <div class="checkbox-group" data-group="Foot_abnormality" data-exclusive="true">
+                                <div class="checkbox-group" data-group="Foot_abnormality" data-exclusive="true">
                                     <div class="checkbox-item">
                                         <input type="checkbox" name="Foot_abnormality" value="Yes">
                                         <label for="">Y</label>
@@ -1176,7 +1199,8 @@
                                 <label for="">Leg length diﬀerence:</label>
                             </td>
                             <td>
-                                 <div class="checkbox-group" data-group="Leg_Length_Difference" data-exclusive="true">
+                                <div class="checkbox-group" data-group="Leg_Length_Difference"
+                                    data-exclusive="true">
                                     <div class="checkbox-item">
                                         <input type="checkbox" name="Leg_Length_Difference" value="Yes">
                                         <label for="">Y</label>
@@ -1195,7 +1219,7 @@
             <div class="col">
                 <h5><span><img src="{{ asset('Image/x-ray.png') }}" alt=""
                             style="width: 35px;height:35px;"></span> Imaging:</h5>
-                <table  class="modified_table" data-title="IMAGING">
+                <table class="modified_table" data-title="IMAGING">
                     <tbody>
                         <tr>
                             <td>
@@ -1226,7 +1250,7 @@
                                 <label for="">MT Cobb:</label>
                             </td>
                             <td>
-                                <input type="text" name="MT_Cobb"  style="width:40%;">
+                                <input type="text" name="MT_Cobb" style="width:40%;">
                             </td>
                         </tr>
                         <tr>
@@ -1234,7 +1258,7 @@
                                 <label for="">TL Kyphosis:</label>
                             </td>
                             <td>
-                                <input type="text" name="TL_Kyphosis"  style="width:40%;">
+                                <input type="text" name="TL_Kyphosis" style="width:40%;">
                             </td>
                         </tr>
                         <tr>
@@ -1259,7 +1283,7 @@
                                 <label for="">TL/L Cobb:</label>
                             </td>
                             <td>
-                                <input type="text" name="TL/L_Cobb"  style="width:40%;">
+                                <input type="text" name="TL/L_Cobb" style="width:40%;">
                             </td>
                         </tr>
                         <tr>
@@ -1267,7 +1291,7 @@
                                 <label for="">L Lordosis:</label>
                             </td>
                             <td>
-                                <input type="text" name="L_Lordosis"  style="width:40%;">
+                                <input type="text" name="L_Lordosis" style="width:40%;">
                             </td>
                         </tr>
                         <tr>
@@ -1275,12 +1299,12 @@
                                 <label for="">Sanders:</label>
                             </td>
                             <td>
-                                <input type="text" name="Sanders"  style="width:40%;">
+                                <input type="text" name="Sanders" style="width:40%;">
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <h5><span><img src="{{ asset('Image/mri.png') }}" alt=""
                             style="width: 35px;height:35px;"></span> MRI:</h5>
                 <div class="form-group" data-title="MRI">
@@ -1294,7 +1318,8 @@
             </div>
         </div>
         <div style="display: flex;justify-content:center;margin-top:20px;">
-            <button type="submit" class="btn btn-success" style="font-size: 25px;width: 200px;" id="savebtn">Save</button>
+            <button type="submit" class="btn btn-success" style="font-size: 25px;width: 200px;"
+                id="savebtn">Save</button>
         </div>
 
         <input type="hidden" value="{{ optional($patDetails)->PATIENT_NAME }}" id="patient_name">
@@ -1306,10 +1331,10 @@
 
 <script src="{{ asset('Sweetalerts/sweetalert2.all.min.js') }}"></script>
 @php
-$regnos= optional($patDetails)->REG_NO;
-    $currentRecord = \App\Models\Opdpart::select('data','regno')
-    ->where('type', 'spinal_deformity')
-    ->where('regno',$regnos)
+    $regnos = optional($patDetails)->REG_NO;
+    $currentRecord = \App\Models\Opdpart::select('data', 'regno')
+        ->where('type', 'spinal_deformity')
+        ->where('regno', $regnos)
         ->whereDate('created_at', \Carbon\Carbon::today())
         ->latest()
         ->first();
@@ -1317,8 +1342,8 @@ $regnos= optional($patDetails)->REG_NO;
 <script>
     // Polyfill for Object.entries (for Safari < 10.1)
     if (!Object.entries) {
-        Object.entries = function (obj) {
-            return Object.keys(obj).map(function (key) {
+        Object.entries = function(obj) {
+            return Object.keys(obj).map(function(key) {
                 return [key, obj[key]];
             });
         };
@@ -1334,17 +1359,19 @@ $regnos= optional($patDetails)->REG_NO;
 
     const allergyData = @json($allergy_data);
     let formDataFromDB = @json($currentRecord->data ?? []);
+    const btn = document.getElementById('savebtn');
 
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         populateForm(document.getElementById('spinedeformifty'), formDataFromDB);
     });
 
     function populateForm(form, data) {
-        Object.entries(data).forEach(function ([key, field]) {
+        Object.entries(data).forEach(function([key, field]) {
             if (field && field.values) {
                 // Fill checkboxes or multi-selects
-                field.values.forEach(function (val) {
-                    var checkbox = form.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(val) + '"]');
+                field.values.forEach(function(val) {
+                    var checkbox = form.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS
+                        .escape(val) + '"]');
                     if (checkbox) {
                         checkbox.checked = true;
                         var temp = checkbox.dataset.target;
@@ -1360,7 +1387,7 @@ $regnos= optional($patDetails)->REG_NO;
                     var input = form.querySelector('[name="' + CSS.escape(key) + '"]');
                     if (input && input.type !== 'checkbox') {
                         var cleanValue = field.values[0]; // take the value as-is
-                        input.value = cleanValue;          // display exactly as stored
+                        input.value = cleanValue; // display exactly as stored
                     }
                 }
             } else {
@@ -1373,18 +1400,18 @@ $regnos= optional($patDetails)->REG_NO;
         });
     }
 
-    document.querySelectorAll('[data-group]').forEach(function (group) {
+    document.querySelectorAll('[data-group]').forEach(function(group) {
         var checkboxes = group.querySelectorAll('input[type="checkbox"]');
         var isExclusive = group.dataset && group.dataset.exclusive === "true";
 
-        checkboxes.forEach(function (checkbox) {
-            checkbox.addEventListener('change', function () {
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
                 var target = checkbox.dataset.target;
                 var relatedInput = target ? document.querySelector(target) : null;
 
                 // Exclusive group: uncheck others
                 if (isExclusive && checkbox.checked) {
-                    checkboxes.forEach(function (cb) {
+                    checkboxes.forEach(function(cb) {
                         if (cb !== checkbox) {
                             cb.checked = false;
 
@@ -1416,14 +1443,15 @@ $regnos= optional($patDetails)->REG_NO;
         });
     });
 
-    document.querySelectorAll('input[type="text"], textarea').forEach(function (input) {
-        input.addEventListener('change', function () {
+    document.querySelectorAll('input[type="text"], textarea').forEach(function(input) {
+        input.addEventListener('change', function() {
             input.value = input.value.trim();
         });
     });
 
-    document.getElementById('spinedeformifty').addEventListener('submit', function (e) {
+    document.getElementById('spinedeformifty').addEventListener('submit', function(e) {
         e.preventDefault();
+        btn.disabled = true;
         var json = getFormDataAsJSON(this); // <-- works because 'this' is the form
         if (!json) return;
 
@@ -1436,24 +1464,27 @@ $regnos= optional($patDetails)->REG_NO;
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            success: function (response) {
+            success: function(response) {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success',
                     allowOutsideClick: false,
                     text: response.message || 'Form submitted successfully!',
                     confirmButtonText: 'OK'
-                }).then(function () {
+                }).then(function() {
                     window.location.reload();
                 });
             },
-            error: function (xhr) {
-                var message = xhr.responseJSON && xhr.responseJSON.message ? xhr.responseJSON.message : 'Something went wrong!';
+            error: function(xhr) {
+                var message = xhr.responseJSON && xhr.responseJSON.message ? xhr.responseJSON
+                    .message : 'Something went wrong!';
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
                     allowOutsideClick: false,
                     text: message
+                }).then(() => {
+                    btn.disabled = false;
                 });
             }
         });
@@ -1469,8 +1500,9 @@ $regnos= optional($patDetails)->REG_NO;
             var value = pair[1];
             if (!value) continue;
 
-            var inputEl = formElement.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(value) + '"]') 
-                || formElement.querySelector('[name="' + CSS.escape(key) + '"]');
+            var inputEl = formElement.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(value) +
+                    '"]') ||
+                formElement.querySelector('[name="' + CSS.escape(key) + '"]');
 
             if (inputEl && inputEl.type === "checkbox" && inputEl.dataset.target) {
                 var relatedInput = document.querySelector(inputEl.dataset.target);
@@ -1481,7 +1513,7 @@ $regnos= optional($patDetails)->REG_NO;
                         allowOutsideClick: false,
                         title: 'Required Field Missing',
                         text: (errorname || 'This field') + ' is required.',
-                    }).then(function () {
+                    }).then(function() {
                         // Scroll to input
                         relatedInput.scrollIntoView({
                             behavior: "smooth",
@@ -1525,7 +1557,8 @@ $regnos= optional($patDetails)->REG_NO;
             }
         }
 
-        var patientName = document.getElementById('patient_name') ? document.getElementById('patient_name').value.trim() : '';
+        var patientName = document.getElementById('patient_name') ? document.getElementById('patient_name').value
+        .trim() : '';
         var regno = document.getElementById('regno') ? document.getElementById('regno').value.trim() : '';
         var age = document.getElementById('age') ? document.getElementById('age').value.trim() : '';
         var sex = document.getElementById('sex') ? document.getElementById('sex').value.trim() : '';
@@ -1536,6 +1569,8 @@ $regnos= optional($patDetails)->REG_NO;
                 title: 'No fields selected!',
                 allowOutsideClick: false,
                 text: 'Please select at least one field and fill in related values if required.',
+            }).then(() => {
+                btn.disabled = false;
             });
             return null;
         }
@@ -1549,4 +1584,3 @@ $regnos= optional($patDetails)->REG_NO;
         return json;
     }
 </script>
-

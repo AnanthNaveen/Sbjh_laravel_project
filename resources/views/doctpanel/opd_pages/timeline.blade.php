@@ -4,16 +4,16 @@
             .section-title {
                 font-size: 1.3rem;
                 color: #2c3e50;
-                margin-bottom: 20px;
+                /* margin-bottom: 20px; */
                 padding-bottom: 10px;
-                border-bottom: 2px solid #418a68; 
+                border-bottom: 2px solid #418a68;
             }
 
             /* Horizontal Timeline Styles */
             .timeline-container {
                 width: 100%;
                 background: white;
-                border-radius: 8px; 
+                border-radius: 8px;
                 padding: 25px;
                 overflow-x: auto;
                 position: relative;
@@ -181,6 +181,7 @@
                 margin-bottom: 6px;
                 list-style: disc inside;
             }
+
             .timeline-wrapper {
                 position: relative;
                 display: flex;
@@ -253,7 +254,7 @@
         </style>
 
         <!-- Main Content -->
-       <h2 class="section-title">Old Records Timeline</h2>
+        <h2 class="section-title">Old Records Timeline</h2>
 
         <div class="timeline-wrapper">
             <button class="scroll-btn left" onclick="scrollTimeline(-1)">
@@ -280,7 +281,7 @@
                                     </div>
                                     <h3 class="timeline-title">OP Report</h3>
                                     <h3 class="timeline-desc">
-                                        Type: <strong>{{ str_replace('_', ' ',ucfirst($record->type)) }}</strong>
+                                        Type: <strong>{{ str_replace('_', ' ', ucfirst($record->type)) }}</strong>
                                     </h3>
                                 </div>
                             </div>
@@ -290,12 +291,12 @@
             </div>
 
             <button class="scroll-btn right" onclick="scrollTimeline(1)">
-               <i class="fas fa-chevron-right" style="color:#0e610d;"></i>
+                <i class="fas fa-chevron-right" style="color:#0e610d;"></i>
             </button>
         </div>
 
         @php
-        
+
         @endphp
         @foreach ($records as $record)
             <div class="modal fade" id="recordModal{{ $record->id }}" tabindex="-1" aria-hidden="true">
@@ -310,7 +311,7 @@
                         </div>
                         <div class="modal-body">
                             @php
-                               $datas = $record->data ?? [];
+                                $datas = $record->data ?? [];
                                 $type = $record->type;
                                 $grouped = [];
 
@@ -332,16 +333,16 @@
                                     'spinal_deformity' => [
                                         'Weakness' => 'Unsteady_gait',
                                         'Bladdercheckbox' => 'checkbox',
-                                        'BracingCasting'  => 'Bracing_Casting',
-                                        'Physiotherapys'  => 'Physiotherapy',
+                                        'BracingCasting' => 'Bracing_Casting',
+                                        'Physiotherapys' => 'Physiotherapy',
                                         'Non-consanguity_checkbox' => 'checkbox',
                                         'Siblings_checkbox' => 'checkbox',
                                         'Birth_History_checkbox' => 'checkbox',
-                                        'Pushprone_test'  => 'checkbox',
-                                        'Suspension(Traction)'  => 'checkbox',
-                                        'Bendings'  => 'checkbox',
-                                        'Pronehyperextension_test'  => 'checkbox',
-                                        'Sensations'  => 'Intact',
+                                        'Pushprone_test' => 'checkbox',
+                                        'Suspension(Traction)' => 'checkbox',
+                                        'Bendings' => 'checkbox',
+                                        'Pronehyperextension_test' => 'checkbox',
+                                        'Sensations' => 'Intact',
                                     ],
                                     'knee' => [
                                         // 'side'           => 'Right',
@@ -364,7 +365,7 @@
                                         'anteriorly' => 'checkbox',
                                         'LateralAspect' => 'checkbox',
                                         'posteriorly' => 'checkbox',
-                                    ],                              
+                                    ],
                                     // default (if no type matched)
                                 ];
                                 $not_table_spineDeformity = true;
@@ -390,56 +391,81 @@
                                                 @endphp
 
                                                 @foreach ($fields as $key => $val)
-                                                @if($key === 'Motor_Strength' && $val === 'Normal')
-                                                <ul>
-                                                    <li><strong>Motor Strength:</strong> Normal</li>
-                                                </ul>
-                                                @endif
+                                                    @if ($key === 'Motor_Strength' && $val === 'Normal')
+                                                        <ul>
+                                                            <li><strong>Motor Strength:</strong> Normal</li>
+                                                        </ul>
+                                                    @endif
                                                     {{-- Special case: Motor Strength --}}
                                                     @if ($key === 'Motor_Strength' && $record->type === 'spinal_deformity' && !$printedMotorStrength)
                                                         @php
-                                                            $muscles = ['Deltoid', 'Biceps', 'Triceps', 'Wrist_Ex', 'Grip', 'Fing_Abd','Psoas','G_Med','Quads','TA','Gastroc','EHL'];
+                                                            $muscles = [
+                                                                'Deltoid',
+                                                                'Biceps',
+                                                                'Triceps',
+                                                                'Wrist_Ex',
+                                                                'Grip',
+                                                                'Fing_Abd',
+                                                                'Psoas',
+                                                                'G_Med',
+                                                                'Quads',
+                                                                'TA',
+                                                                'Gastroc',
+                                                                'EHL',
+                                                            ];
                                                             $printedMotorStrength = true; // Mark that we’ve printed it
                                                         @endphp
-                                                        
+
 
                                                         {{-- <li class="wrap-text"> --}}
-                                                            {{-- <strong>Motor Strength:</strong> --}}
-                                                            <ul style="margin-top: 5px;">
-                                                                @foreach ($muscles as $muscle)
-                                                                    @if(isset($fields[$muscle.'_Right']))
-                                                                        <li>
-                                                                            <strong>{{ $muscle }} Right:</strong>
-                                                                            {{ $fields[$muscle.'_Right'] ?? 'N/A' }} 
-                                                                        </li>
-                                                                    @endif
-                                                                    @if(isset($fields[$muscle.'_Left']))
-                                                                        <li>
-                                                                            <strong>{{ $muscle }} Left:</strong>
-                                                                            {{ $fields[$muscle.'_Left'] ?? 'N/A' }}
-                                                                        </li>
-                                                                    @endif
-                                                                @endforeach
-                                                            </ul>
+                                                        {{-- <strong>Motor Strength:</strong> --}}
+                                                        <ul style="margin-top: 5px;">
+                                                            @foreach ($muscles as $muscle)
+                                                                @if (isset($fields[$muscle . '_Right']))
+                                                                    <li>
+                                                                        <strong>{{ $muscle }} Right:</strong>
+                                                                        {{ $fields[$muscle . '_Right'] ?? 'N/A' }}
+                                                                    </li>
+                                                                @endif
+                                                                @if (isset($fields[$muscle . '_Left']))
+                                                                    <li>
+                                                                        <strong>{{ $muscle }} Left:</strong>
+                                                                        {{ $fields[$muscle . '_Left'] ?? 'N/A' }}
+                                                                    </li>
+                                                                @endif
+                                                            @endforeach
+                                                        </ul>
                                                         {{-- </li> --}}
-
-                                                    @elseif ($printedMotorStrength && in_array($key, [
-                                                        'Deltoid_Right', 'Deltoid_Left',
-                                                        'Biceps_Right', 'Biceps_Left',
-                                                        'Triceps_Right', 'Triceps_Left',
-                                                        'Wrist_Ex_Right', 'Wrist_Ex_Left',
-                                                        'Grip_Right', 'Grip_Left',
-                                                        'Fing_Abd_Right', 'Fing_Abd_Left',
-                                                        'Psoas_Right','Psoas_Left',
-                                                        'G_Med_Right','G_Med_Left',
-                                                        'Quads_Right','Quads_Left',
-                                                        'TA_Right','TA_Left',
-                                                        'Gastroc_Right','Gastroc_Left',
-                                                        'EHL_Right','EHL_Left',
-                                                    ]))
+                                                    @elseif (
+                                                        $printedMotorStrength &&
+                                                            in_array($key, [
+                                                                'Deltoid_Right',
+                                                                'Deltoid_Left',
+                                                                'Biceps_Right',
+                                                                'Biceps_Left',
+                                                                'Triceps_Right',
+                                                                'Triceps_Left',
+                                                                'Wrist_Ex_Right',
+                                                                'Wrist_Ex_Left',
+                                                                'Grip_Right',
+                                                                'Grip_Left',
+                                                                'Fing_Abd_Right',
+                                                                'Fing_Abd_Left',
+                                                                'Psoas_Right',
+                                                                'Psoas_Left',
+                                                                'G_Med_Right',
+                                                                'G_Med_Left',
+                                                                'Quads_Right',
+                                                                'Quads_Left',
+                                                                'TA_Right',
+                                                                'TA_Left',
+                                                                'Gastroc_Right',
+                                                                'Gastroc_Left',
+                                                                'EHL_Right',
+                                                                'EHL_Left',
+                                                            ]))
                                                         {{-- Skip individual muscle keys after Motor Strength --}}
                                                         @continue
-
                                                     @else
                                                         {{-- Normal keys --}}
                                                         <li class="wrap-text">
@@ -486,6 +512,7 @@
             function modelclose(id) {
                 document.getElementById(`recordclose${id}`).click();
             }
+
             function scrollTimeline(direction) {
                 const container = document.querySelector('.timeline-container');
                 const scrollAmount = 300; // pixels to scroll per click
@@ -494,7 +521,6 @@
                     behavior: 'smooth'
                 });
             }
-
         </script>
 
     @endif

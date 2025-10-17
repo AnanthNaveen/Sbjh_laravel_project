@@ -1620,7 +1620,7 @@
 
             </div>
             <div style="display: flex;justify-content:center;margin-top:20px;">
-                <button type="submit" class="btn btn-success" style="font-size: 25px;width: 200px;">Save</button>
+                <button type="submit" class="btn btn-success" style="font-size: 25px;width: 200px;" id="savebtn">Save</button>
             </div>
         </div>
     </div>
@@ -1644,6 +1644,7 @@
 <script>
     const allergyData = @json($allergy_data);
     let formDataFromDB = @json($currentRecord->data ?? []);
+    const btn = document.getElementById('savebtn');
 
     function populateForm(form, data) {
         Object.entries(data).forEach(([key, field]) => {
@@ -1807,7 +1808,10 @@
             Swal.fire({
                 icon: 'warning',
                 title: 'No fields selected!',
+                allowOutsideClick: false,
                 text: 'Please select at least one field and fill in related values if required.',
+            }).then(() => {
+                btn.disabled = false;
             });
             return null;
         }
@@ -1828,6 +1832,7 @@
     // ✅ Form submit handler
     document.getElementById("myForm").addEventListener("submit", function(e) {
         e.preventDefault();
+        btn.disabled = true;
 
         const json = getFormDataAsJSON(this);
         if (!json) return;
@@ -1845,16 +1850,22 @@
                 Swal.fire({
                     icon: 'success',
                     title: 'Success',
+                    allowOutsideClick: false,
                     text: response.message || 'Form submitted successfully!',
                     confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.reload();
                 });
             },
             error: function(xhr) {
                 let message = xhr.responseJSON?.message || 'Something went wrong!';
                 Swal.fire({
                     icon: 'error',
+                    allowOutsideClick: false,
                     title: 'Oops...',
                     text: message
+                }).then(() => {
+                    btn.disabled = false;
                 });
             }
         });

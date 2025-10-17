@@ -221,6 +221,7 @@
         border: 2px solid red !important;
         outline: none !important;
     }
+
     @media (max-width: 768px) {
         .container {
             margin: 10px;
@@ -253,7 +254,7 @@
         <div class="row">
             <div class="col">
                 <h5><span><img src="{{ asset('Image/paper.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Chief Complaint:</h5>
+                            style="width: 35px;height:35px;"></span> Chief Complaint:</h5>
                 <div class="checkbox-group" data-title="Chief Complaint">
                     <div class="checkbox-item">
                         <input type="checkbox" name="Chief_Complaint" value="Pain">
@@ -274,7 +275,7 @@
                 </div>
                 <div class="form-group" data-title="Chief Complaint" data-group="Side" data-exclusive="true">
                     <h5><span><img src="{{ asset('Image/transfer.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Side:</h5> 
+                                style="width: 35px;height:35px;"></span> Side:</h5>
                     <div class="checkbox-group">
                         <div class="checkbox-item">
                             <input type="checkbox" name="Side" value="Right">
@@ -301,11 +302,11 @@
                     <h5><span><img src="{{ asset('Image/backbone-disease.png') }}" alt=""
                                 style="width: 35px;height:35px;"></span> Onset:</h5>
                     <div class="checkbox-group" data-group="Onset" data-exclusive="true">
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Onset" value="Insidious">
                             <label for="">Insidious</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Onset" value="Sudden">
                             <label for="">Sudden</label>
                         </div>
@@ -315,11 +316,11 @@
                     <h5><span><img src="{{ asset('Image/radiation.png') }}" alt=""
                                 style="width: 35px;height:35px;"></span> Radiation:</h5>
                     <div class="checkbox-group" data-group="Radiation" data-exclusive="true">
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Radiation" value="Base_of_shoulder_axilla">
                             <label for="">Base of shoulder axilla</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Radiation" value="Outer_aspect_of_upper_arm">
                             <label for="">Outer aspect of upper arm</label>
                         </div>
@@ -329,11 +330,11 @@
                     <h5><span><img src="{{ asset('Image/character.png') }}" alt=""
                                 style="width: 35px;height:35px;"></span> Character:</h5>
                     <div class="checkbox-group" data-group="Character" data-exclusive="true">
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Character" value="Throbbing">
                             <label for="">Throbbing</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Character" value="Pricking">
                             <label for="">Pricking</label>
                         </div>
@@ -341,25 +342,25 @@
                 </div>
                 <div data-title="Chief Complaint" data-group="Aggravating_factors">
                     <h5><span><img src="{{ asset('Image/expression-2.png') }}" alt=""
-                                    style="width: 35px;height:35px;"></span> Aggravating factors:</h5>
+                                style="width: 35px;height:35px;"></span> Aggravating factors:</h5>
                     <div class="checkbox-group">
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Aggravating_factors" value="Exercise">
                             <label for="">Exercise</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Aggravating_factors" value="Strenuous_activity">
                             <label for="">Strenuous activity</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Aggravating_factors" value="Overhead_activities">
                             <label for="">Overhead activities</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Aggravating_factors" value="Walking">
                             <label for="">Walking</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Aggravating_factors" value="Running">
                             <label for="">Running</label>
                         </div>
@@ -369,36 +370,39 @@
                             <input type="checkbox" name="Aggravating_factors" value="Others" data-target="#input4">
                             <label for="">Others</label>
                         </div>
-                        <input type="text" placeholder="Specify others" id="input4" name="Aggravating_factors_others" disabled>
+                        <input type="text" placeholder="Specify others" id="input4"
+                            name="Aggravating_factors_others" disabled>
                     </div>
-                        
+
                 </div>
                 <div data-title="Chief Complaint">
                     <h5><span><img src="{{ asset('Image/exercises.png') }}" alt=""
                                 style="width: 35px;height:35px;"></span> Relieving factors:</h5>
                     <div class="checkbox-group" data-group="Relieving_factors">
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Relieving_factors" value="Rest">
                             <label for="">Rest</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Relieving_factors" value="Medication">
                             <label for="">Medication</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Relieving_factors" value="Lying_down">
                             <label for="">Lying down</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Relieving_factors" value="Pricking" data-target="#input5">
                             <label for="">Others</label>
                         </div>
-                        <input type="text" placeholder="Specify others" name="Relieving_factors_Others" id="input5" disabled>
-                        
+                        <input type="text" placeholder="Specify others" name="Relieving_factors_Others"
+                            id="input5" disabled>
+
                     </div>
                 </div>
 
-                <div class="form-group" data-title="Relation to trauma" data-group="Relation_to_trauma" data-exclusive="true">
+                <div class="form-group" data-title="Relation to trauma" data-group="Relation_to_trauma"
+                    data-exclusive="true">
                     <h5><span><img src="{{ asset('Image/trauma.png') }}" alt=""
                                 style="width: 35px;height:35px;"></span> Relation to trauma:</h5>
                     <div class="checkbox-group">
@@ -410,18 +414,19 @@
                             <input type="checkbox" name="Relation_to_trauma" value="checkbox" data-target="#input6">
                             <label for="">Yes</label>
                         </div>
-                        <input type="text" id="input6" placeholder="Specify Relation to trauma" name="Relation_to_trauma_Description" disabled>
+                        <input type="text" id="input6" placeholder="Specify Relation to trauma"
+                            name="Relation_to_trauma_Description" disabled>
                     </div>
                 </div>
                 <div data-title="Relation to trauma">
                     <h5><span><img src="{{ asset('Image/fever copy.png') }}" alt=""
                                 style="width: 35px;height:35px;"></span> Any H/O fever:</h5>
                     <div class="checkbox-group" data-group="Any_H/O_fever" data-exclusive="true">
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Any_H/O_fever" value="Yes">
                             <label for="">Yes</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Any_H/O_fever" value="No">
                             <label for="">No</label>
                         </div>
@@ -431,11 +436,11 @@
                     <h5><span><img src="{{ asset('Image/Instability.png') }}" alt=""
                                 style="width: 35px;height:35px;"></span> Instability:</h5>
                     <div class="checkbox-group" data-group="Instability" data-exclusive="true">
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Instability" value="Voluntary">
                             <label for="">Voluntary</label>
                         </div>
-                       <div class="checkbox-item" style="margin-left:45px">
+                        <div class="checkbox-item" style="margin-left:45px">
                             <input type="checkbox" name="Instability" value="Disvoluntary">
                             <label for="">Disvoluntary</label>
                         </div>
@@ -513,10 +518,12 @@
                             <label for="">No</label>
                         </div>
                         <div class="checkbox-item">
-                            <input type="checkbox" name="Prior_Treatment_Attempted" value="Yes" data-target="#input7">
+                            <input type="checkbox" name="Prior_Treatment_Attempted" value="Yes"
+                                data-target="#input7">
                             <label for="">Yes</label>
                         </div>
-                        <input type="text" placeholder="Prior Treatment Attempted" id="input7" disabled name="Prior_Treatments_Attempted">
+                        <input type="text" placeholder="Prior Treatment Attempted" id="input7" disabled
+                            name="Prior_Treatments_Attempted">
                     </div>
                 </div>
                 <div class="form-group" data-title="Prior Treatment Attempted">
@@ -529,7 +536,8 @@
                         <input type="text" placeholder="Specify Any" name="Shoulder_dislocation">
                     </div>
                 </div>
-                <div class="form-group" data-title="Prior Treatment Attempted" data-group="Pain_is_worst_in" data-exclusive="true">
+                <div class="form-group" data-title="Prior Treatment Attempted" data-group="Pain_is_worst_in"
+                    data-exclusive="true">
                     <h5><span><img src="{{ asset('Image/pain.png') }}" alt=""
                                 style="width: 35px;height:35px;"></span> Pain is worst in:</h5>
                     <div class="checkbox-group">
@@ -543,7 +551,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="col">
                 <div data-title="Prior Treatment Attempted">
@@ -555,14 +563,15 @@
                 </div>
                 <div data-title="Prior Treatment Attempted">
                     <h5><span><img src="{{ asset('Image/past-2.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Patient had Similiar complaint in the Past:</h5>
+                                style="width: 35px;height:35px;"></span> Patient had Similiar complaint in the Past:
+                    </h5>
                     <div class="form-group">
-                        <textarea  name="Patient_had_Similiar_complaint_in_the_Past" placeholder="Specify complaint"></textarea>
+                        <textarea name="Patient_had_Similiar_complaint_in_the_Past" placeholder="Specify complaint"></textarea>
                     </div>
                 </div>
                 <div data-title="Other Complaints">
                     <h5><span><img src="{{ asset('Image/angry-customer.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Other Complaints:</h5>
+                                style="width: 35px;height:35px;"></span> Other Complaints:</h5>
                     <div class="checkbox-group" data-group="Fatigue" data-exclusive="true">
                         <div class="checkbox-item">
                             <label>Fatigue:</label>
@@ -573,10 +582,12 @@
                             <input type="checkbox" name="fatigue" value="Yes" data-target="#input8">
                             <label for="">Yes</label>
                         </div>
-                        <input type="text" placeholder="Specify Other Complaints" name="Fatigue" disabled id="input8">
+                        <input type="text" placeholder="Specify Other Complaints" name="Fatigue" disabled
+                            id="input8">
                     </div>
                 </div>
-                <div class="mt-2" style="display: flex;flex-wrap:wrap;gap:5px;row-gap:20px;" data-title="Other Complaints">
+                <div class="mt-2" style="display: flex;flex-wrap:wrap;gap:5px;row-gap:20px;"
+                    data-title="Other Complaints">
                     <div>
                         <label for="" class="label1">Bladder:</label>
                         <input type="text" class="inline-input" placeholder="Describe Bladder" name="Bladder">
@@ -591,25 +602,29 @@
                     </div>
                     <div>
                         <label for="" class="label1">Weight loss:</label>
-                        <input type="text" class="inline-input" placeholder="Describe Weight loss" name="Weight_loss">
+                        <input type="text" class="inline-input" placeholder="Describe Weight loss"
+                            name="Weight_loss">
                     </div>
                     <div>
                         <label for="" class="label1">Weight gain:</label>
-                        <input type="text" class="inline-input" placeholder="Describe Weight gain" name="Weight_gain">
+                        <input type="text" class="inline-input" placeholder="Describe Weight gain"
+                            name="Weight_gain">
                     </div>
                     <div>
                         <label for="" class="label1">Loss of Appetite:</label>
-                        <input type="text" class="inline-input" placeholder="Describe Loss of Appetite" name="Loss_of_Appetite">
+                        <input type="text" class="inline-input" placeholder="Describe Loss of Appetite"
+                            name="Loss_of_Appetite">
                     </div>
                     <div>
                         <label for="" class="label1">Others:</label>
                         <input type="text" class="inline-input" placeholder="Describe Others" name="Others">
                     </div>
-                    
+
                 </div>
                 <h5><span><img src="{{ asset('Image/history-book-2.png') }}" alt=""
                             style="width: 35px;height:35px;"></span> Personal History:</h5>
-                <div class="mt-2" style="display: flex;flex-wrap:wrap;gap:5px;row-gap:20px;" data-title="Personal History">
+                <div class="mt-2" style="display: flex;flex-wrap:wrap;gap:5px;row-gap:20px;"
+                    data-title="Personal History">
                     <div>
                         <label for="" class="label1">Alcohol:</label>
                         <input type="text" class="inline-input" placeholder="Describe Alcohol" name="Alcohol">
@@ -628,14 +643,15 @@
                     </div>
                     <div>
                         <label for="" class="label1">Others:</label>
-                        <input type="text" class="inline-input" placeholder="Describe Others" name="Personal_History_Others">
+                        <input type="text" class="inline-input" placeholder="Describe Others"
+                            name="Personal_History_Others">
                     </div>
                 </div>
                 <div>
                     <h5><span><img src="{{ asset('Image/past-2.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Past Medical History:</h5>
+                                style="width: 35px;height:35px;"></span> Past Medical History:</h5>
                     <table style="box-shadow: none;">
-                        <tbody data-title="Past Medical History">   
+                        <tbody data-title="Past Medical History">
                             <tr>
                                 <td>
                                     <label for="">Hypertension:</label>
@@ -643,7 +659,8 @@
                                 <td>
                                     <div class="checkbox-item">
                                         <label for="" class="label1">Since:</label>
-                                        <input type="text" class="inline-input" name="Hypertension" placeholder="Since" style="width:45%;">
+                                        <input type="text" class="inline-input" name="Hypertension"
+                                            placeholder="Since" style="width:45%;">
                                     </div>
                                 </td>
                             </tr>
@@ -653,7 +670,8 @@
                                 </td>
                                 <td>
                                     <div class="checkbox-item">
-                                        <input type="text" class="inline-input" name="Thyroid" placeholder="Since" style="width:45%;">
+                                        <input type="text" class="inline-input" name="Thyroid"
+                                            placeholder="Since" style="width:45%;">
                                         <label for="" class="label1">years ago</label>
                                     </div>
                                 </td>
@@ -665,7 +683,8 @@
                                 <td>
                                     <div class="checkbox-item">
                                         <label for="" class="label1">Since:</label>
-                                        <input type="text" class="inline-input" name="Diabetics" placeholder="Since" style="width:45%;">
+                                        <input type="text" class="inline-input" name="Diabetics"
+                                            placeholder="Since" style="width:45%;">
                                     </div>
                                 </td>
                             </tr>
@@ -675,7 +694,8 @@
                                 </td>
                                 <td>
                                     <div class="checkbox-item">
-                                        <input type="text" class="inline-input" name="Tuberculosis" placeholder="Since" style="width:45%;">
+                                        <input type="text" class="inline-input" name="Tuberculosis"
+                                            placeholder="Since" style="width:45%;">
                                         <label for="" class="label1">years ago</label>
                                     </div>
                                 </td>
@@ -684,8 +704,10 @@
                                 <td></td>
                                 <td>
                                     <div class="" style="display:flex;gap:180px;">
-                                        <label for="" class="label1" style="font-weight:bold;">Type Of Disorder</label>
-                                        <label for="" class="label1" style="font-weight:bold;">Duration</label>
+                                        <label for="" class="label1" style="font-weight:bold;">Type Of
+                                            Disorder</label>
+                                        <label for="" class="label1"
+                                            style="font-weight:bold;">Duration</label>
                                     </div>
                                 </td>
                             </tr>
@@ -817,252 +839,261 @@
         </div>
     </div>
     <div class="section" id="should" style="display:none;">
-       <div class="row">
-        <div class="col">
-            <div data-title="Inspection-shoulder">
+        <div class="row">
+            <div class="col">
+                <div data-title="Inspection-shoulder">
 
-                <div id="Inspectionshould">
-                    <h5><span><img src="{{ asset('Image/Inspection.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Inspection:</h5>
-                    <div class="form-group">
-                        <textarea name="Inspection" placeholder="Specify Inspection"></textarea>
-                    </div>
-                </div>
-                <div>
-                    <h6 style="margin-top: 10px;">Skin:</h6>
-                    <div class="form-group">
-                        <textarea name="Skin" placeholder="Specify Skin"></textarea>
-                    </div>
-                </div>
-                <div>
-                    <h6 style="margin-top: 10px;">Swelling:</h6>
-                    <div class="checkbox-group" data-group="Swelling" data-exclusive="true">
-                        <div class="checkbox-item">
-                            <input type="checkbox" name="Swelling" value="No">
-                            <label for="">No</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" name="Swelling" value="Yes">
-                            <label for="">Yes</label>
+                    <div id="Inspectionshould">
+                        <h5><span><img src="{{ asset('Image/Inspection.png') }}" alt=""
+                                    style="width: 35px;height:35px;"></span> Inspection:</h5>
+                        <div class="form-group">
+                            <textarea name="Inspection" placeholder="Specify Inspection"></textarea>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <h6 style="margin-top: 10px;">Asymmetry:</h6>
-                    <div class="checkbox-group" data-group="Asymmetry" data-exclusive="true">
-                        <div class="checkbox-item">
-                            <input type="checkbox" name="Asymmetry" value="No">
-                            <label for="">No</label>
+                    <div>
+                        <h6 style="margin-top: 10px;">Skin:</h6>
+                        <div class="form-group">
+                            <textarea name="Skin" placeholder="Specify Skin"></textarea>
                         </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" name="Asymmetry" value="Yes">
-                            <label for="">Yes</label>
+                    </div>
+                    <div>
+                        <h6 style="margin-top: 10px;">Swelling:</h6>
+                        <div class="checkbox-group" data-group="Swelling" data-exclusive="true">
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="Swelling" value="No">
+                                <label for="">No</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="Swelling" value="Yes">
+                                <label for="">Yes</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h6 style="margin-top: 10px;">Asymmetry:</h6>
+                        <div class="checkbox-group" data-group="Asymmetry" data-exclusive="true">
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="Asymmetry" value="No">
+                                <label for="">No</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="Asymmetry" value="Yes">
+                                <label for="">Yes</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h6 style="margin-top: 10px;">Specific Finding:</h6>
+                        <div class="form-group">
+                            <textarea name="Specific_Finding" placeholder="Specify Specific Finding"></textarea>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h6 style="margin-top: 10px;">Specific Finding:</h6>
-                    <div class="form-group">
-                        <textarea name="Specific_Finding" placeholder="Specify Specific Finding"></textarea>
+                <h5><span><img src="{{ asset('Image/physiotherapy.png') }}" alt=""
+                            style="width: 35px;height:35px;"></span> Palpation:</h5>
+                <div style="display: flex;gap:10px; flex-wrap: wrap;" data-title="Palpation-shoulder">
+                    <div data-group="Anteriorly">
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="anteriorly" value="checkbox" data-target="#input1">
+                            <label for="">Anteriorly</label>
+                        </div>
+                        <textarea placeholder="Describe Anteriorly" disabled id="input1" name="Anteriorly"></textarea>
+                    </div>
+                    <div data-group="Lateral_Aspect">
+                        <div class="checkbox-item">
+                            <input type="checkbox" data-target="#input2" name="LateralAspect" value="checkbox">
+                            <label for="">Lateral Aspect</label>
+                        </div>
+                        <textarea placeholder="Describe Lateral Aspect" disabled id="input2" name="Lateral_Aspect"></textarea>
+                    </div>
+                    <div data-group="Posteriorly">
+                        <div class="checkbox-item">
+                            <input type="checkbox" data-target="#input3" name="posteriorly" value="checkbox">
+                            <label for="">Posteriorly</label>
+                        </div>
+                        <textarea placeholder="Describe Bending" disabled id="input3" name="Posteriorly"></textarea>
                     </div>
                 </div>
+                <h5><span><img src="{{ asset('Image/stretching.png') }}" alt=""
+                            style="width: 35px;height:35px;"></span> Movements:</h5>
+                <table style="box-shadow:none;" data-title="Movements-shoulder">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Active</th>
+                            <th>Passive</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Flexion:</td>
+                            <td><input type="text" name="Flexion_active"></td>
+                            <td><input type="text" name="Flexion_passive"></td>
+                        </tr>
+                        <tr>
+                            <td>Extension:</td>
+                            <td><input type="text" name="Extension_active"></td>
+                            <td><input type="text" name="Extension_passive"></td>
+                        </tr>
+                        <tr>
+                            <td>Internal Rotation(IR):</td>
+                            <td><input type="text" name="Internal_Rotation(IR)_active"></td>
+                            <td><input type="text" name="Internal_Rotation(IR)_passive"></td>
+                        </tr>
+                        <tr>
+                            <td>External Rotation (ER):</td>
+                            <td><input type="text" name="External_Rotation(ER)_active"></td>
+                            <td><input type="text" name="External_Rotation(ER)_passive"></td>
+                        </tr>
+                        <tr>
+                            <td>Adduction:</td>
+                            <td><input type="text" name="Adduction_active"></td>
+                            <td><input type="text" name="Adduction_passive"></td>
+                        </tr>
+                        <tr>
+                            <td>Abduction:</td>
+                            <td><input type="text" name="Abduction_active"></td>
+                            <td><input type="text" name="Abduction_passive"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5><span><img src="{{ asset('Image/search.png') }}" alt=""
+                            style="width: 35px;height:35px;"></span> Other Findings:</h5>
+                <div>
+                    <div class="form-group" data-title="Movements-shoulder">
+                        <textarea name="Other_Findings" placeholder="Specify Other Findings"></textarea>
+                    </div>
+                </div>
+
             </div>
-            <h5><span><img src="{{ asset('Image/physiotherapy.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Palpation:</h5>
-            <div style="display: flex;gap:10px; flex-wrap: wrap;" data-title="Palpation-shoulder">
-                <div data-group="Anteriorly">
-                    <div class="checkbox-item">
-                        <input type="checkbox" name="anteriorly" value="checkbox" data-target="#input1">
-                        <label for="">Anteriorly</label>
-                    </div>
-                    <textarea  placeholder="Describe Anteriorly" disabled id="input1" name="Anteriorly"></textarea>
-                </div>
-                <div data-group="Lateral_Aspect">
-                    <div class="checkbox-item">
-                        <input type="checkbox"  data-target="#input2" name="LateralAspect" value="checkbox">
-                        <label for="">Lateral Aspect</label>
-                    </div>
-                    <textarea  placeholder="Describe Lateral Aspect" disabled id="input2" name="Lateral_Aspect"></textarea>
-                </div>
-                <div data-group="Posteriorly">
-                    <div class="checkbox-item">
-                        <input type="checkbox"  data-target="#input3" name="posteriorly" value="checkbox">
-                        <label for="">Posteriorly</label>
-                    </div>
-                    <textarea  placeholder="Describe Bending" disabled id="input3" name="Posteriorly"></textarea>
-                </div>
-            </div>
-            <h5><span><img src="{{ asset('Image/stretching.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Movements:</h5>
-            <table style="box-shadow:none;" data-title="Movements-shoulder">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Active</th>
-                        <th>Passive</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Flexion:</td>
-                        <td><input type="text" name="Flexion_active"></td>
-                        <td><input type="text" name="Flexion_passive"></td>
-                    </tr>
-                    <tr>
-                        <td>Extension:</td>
-                        <td><input type="text" name="Extension_active"></td>
-                        <td><input type="text" name="Extension_passive"></td>
-                    </tr>
-                    <tr>
-                        <td>Internal Rotation(IR):</td>
-                        <td><input type="text" name="Internal_Rotation(IR)_active"></td>
-                        <td><input type="text" name="Internal_Rotation(IR)_passive"></td>
-                    </tr>
-                    <tr>
-                        <td>External Rotation (ER):</td>
-                        <td><input type="text" name="External_Rotation(ER)_active"></td>
-                        <td><input type="text" name="External_Rotation(ER)_passive"></td>
-                    </tr>
-                    <tr>
-                        <td>Adduction:</td>
-                        <td><input type="text" name="Adduction_active"></td>
-                        <td><input type="text" name="Adduction_passive"></td>
-                    </tr>
-                    <tr>
-                        <td>Abduction:</td>  
-                        <td><input type="text" name="Abduction_active"></td>
-                        <td><input type="text" name="Abduction_passive"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <h5><span><img src="{{ asset('Image/search.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Other Findings:</h5>
-            <div>
-                <div class="form-group" data-title="Movements-shoulder">
-                    <textarea name="Other_Findings" placeholder="Specify Other Findings"></textarea>
-                </div>
-            </div>
-            
-        </div>
-        <div class="col">
-            <h5><span><img src="{{ asset('Image/sample.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Special Test:</h5>
-            <table style="width:85%;box-shadow:none;">
-                <tbody>
-                    <tr>
-                        <td colspan="2" style="
+            <div class="col">
+                <h5><span><img src="{{ asset('Image/sample.png') }}" alt=""
+                            style="width: 35px;height:35px;"></span> Special Test:</h5>
+                <table style="width:85%;box-shadow:none;">
+                    <tbody>
+                        <tr>
+                            <td colspan="2"
+                                style="
                             text-align:center;
                             font-weight:bold;
                             background: linear-gradient(135deg, #126328 0%, rgb(103, 156, 37) 100%);
                             color: white;
-                            font-weight: 500;">Rotator Cuff Pathology :</td>
-                    </tr>
-                    <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
-                        <td>Neer's Impingement Sign :</td>
-                        <td><input type="text" name="Neer's_Impingement_Sign"></td>
-                    </tr>
-                    <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
-                        <td>Neer's Impingement Test :</td>
-                        <td><input type="text" name="Neer's_Impingement_Test"></td>
-                    </tr>
-                    <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
-                        <td>Hawkins - Kennedy Test :</td>
-                        <td><input type="text" name="Hawkins_-_Kennedy_Test"></td>
-                    </tr>
-                    <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
-                        <td>Drop Arm Test :</td>
-                        <td><input type="text" name="Drop_Arm_Test"></td>
-                    </tr>
-                    <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
-                        <td>Herber's Test :</td>
-                        <td><input type="text" name="Herber's_Test"></td>
-                    </tr>
-                    <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
-                        <td>Jobe's Test :</td>
-                        <td><input type="text" name="Jobe's_Test"></td>
-                    </tr>
-                    <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
-                        <td>Test for Infraspinatus & Teres Minor :</td>
-                        <td><input type="text" name="Test_for_Infraspinatus_&_Teres_Minor"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="
+                            font-weight: 500;">
+                                Rotator Cuff Pathology :</td>
+                        </tr>
+                        <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
+                            <td>Neer's Impingement Sign :</td>
+                            <td><input type="text" name="Neer's_Impingement_Sign"></td>
+                        </tr>
+                        <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
+                            <td>Neer's Impingement Test :</td>
+                            <td><input type="text" name="Neer's_Impingement_Test"></td>
+                        </tr>
+                        <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
+                            <td>Hawkins - Kennedy Test :</td>
+                            <td><input type="text" name="Hawkins_-_Kennedy_Test"></td>
+                        </tr>
+                        <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
+                            <td>Drop Arm Test :</td>
+                            <td><input type="text" name="Drop_Arm_Test"></td>
+                        </tr>
+                        <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
+                            <td>Herber's Test :</td>
+                            <td><input type="text" name="Herber's_Test"></td>
+                        </tr>
+                        <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
+                            <td>Jobe's Test :</td>
+                            <td><input type="text" name="Jobe's_Test"></td>
+                        </tr>
+                        <tr data-title="Special Test Rotator Cuff Pathology-shoulder">
+                            <td>Test for Infraspinatus & Teres Minor :</td>
+                            <td><input type="text" name="Test_for_Infraspinatus_&_Teres_Minor"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"
+                                style="
                             text-align:center;
                             font-weight:bold;
                             background: linear-gradient(135deg, #126328 0%, rgb(103, 156, 37) 100%);
                             color: white;
                             font-weight: 500;
-                            border-radius: 10px 10px 0 0;">Test for Shoulder Instability :</td>
-                    </tr>
-                    <tr data-title="Special test for Shoulder Instability">
-                        <td>Anterior Instability :</td>
-                        <td><input type="text" name="Anterior_Instability"></td>
-                    </tr>
-                    <tr data-title="Special test for Shoulder Instability">
-                        <td>Apprehension Test :</td>
-                        <td><input type="text" name="Apprehension_Test"></td>
-                    </tr>
-                    <tr data-title="Special test for Shoulder Instability">
-                        <td>Relocation Test (Jobe's) :</td>
-                        <td><input type="text" name="Relocation_Test_(Jobe's)"></td>
-                    </tr>
-                    <tr data-title="Special test for Shoulder Instability">
-                        <td>Sulcus Sign :</td>
-                        <td><input type="text" name="Sulcus_Sign"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="
+                            border-radius: 10px 10px 0 0;">
+                                Test for Shoulder Instability :</td>
+                        </tr>
+                        <tr data-title="Special test for Shoulder Instability">
+                            <td>Anterior Instability :</td>
+                            <td><input type="text" name="Anterior_Instability"></td>
+                        </tr>
+                        <tr data-title="Special test for Shoulder Instability">
+                            <td>Apprehension Test :</td>
+                            <td><input type="text" name="Apprehension_Test"></td>
+                        </tr>
+                        <tr data-title="Special test for Shoulder Instability">
+                            <td>Relocation Test (Jobe's) :</td>
+                            <td><input type="text" name="Relocation_Test_(Jobe's)"></td>
+                        </tr>
+                        <tr data-title="Special test for Shoulder Instability">
+                            <td>Sulcus Sign :</td>
+                            <td><input type="text" name="Sulcus_Sign"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"
+                                style="
                             text-align:center;
                             font-weight:bold;
                             background: linear-gradient(135deg, #126328 0%, rgb(103, 156, 37) 100%);
                             color: white;
                             font-weight: 500;
-                            border-radius: 10px 10px 0 0;">Other System Examination :</td>
-                    </tr>
-                    <tr data-title="Other System Examination-shoulder">
-                        <td>Central Nervous System(CNS) :</td>
-                        <td><input type="text" name="Central_Nervous_System(CNS)"></td>
-                    </tr>
-                    <tr data-title="Other System Examination-shoulder">
-                        <td>Cardiovascular System(CVS) :</td>
-                        <td><input type="text" name="Cardiovascular_System(CVS)"></td>
-                    </tr>
-                    <tr data-title="Other System Examination-shoulder">
-                        <td>Respiratory System(RS) :</td>
-                        <td><input type="text" name="Respiratory_System(RS)"></td>
-                    </tr>
-                    <tr data-title="Other System Examination-shoulder">
-                        <td>Spine : Neurology :</td>
-                        <td><input type="text" name="Spine-Neurology"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div data-title="Other System Examination-shoulder">
-                <h5><span><img src="{{ asset('Image/checkup.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Proposed Diagnosis :</h5>
-                <textarea  placeholder="Describe Proposed Diagnosis" style="max-width: 65%;height:65px;" name="Proposed_Diagnosis"></textarea>
-            </div>
+                            border-radius: 10px 10px 0 0;">
+                                Other System Examination :</td>
+                        </tr>
+                        <tr data-title="Other System Examination-shoulder">
+                            <td>Central Nervous System(CNS) :</td>
+                            <td><input type="text" name="Central_Nervous_System(CNS)"></td>
+                        </tr>
+                        <tr data-title="Other System Examination-shoulder">
+                            <td>Cardiovascular System(CVS) :</td>
+                            <td><input type="text" name="Cardiovascular_System(CVS)"></td>
+                        </tr>
+                        <tr data-title="Other System Examination-shoulder">
+                            <td>Respiratory System(RS) :</td>
+                            <td><input type="text" name="Respiratory_System(RS)"></td>
+                        </tr>
+                        <tr data-title="Other System Examination-shoulder">
+                            <td>Spine : Neurology :</td>
+                            <td><input type="text" name="Spine-Neurology"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div data-title="Other System Examination-shoulder">
+                    <h5><span><img src="{{ asset('Image/checkup.png') }}" alt=""
+                                style="width: 35px;height:35px;"></span> Proposed Diagnosis :</h5>
+                    <textarea placeholder="Describe Proposed Diagnosis" style="max-width: 65%;height:65px;" name="Proposed_Diagnosis"></textarea>
+                </div>
 
+            </div>
         </div>
-       </div>
-       <div style="display: flex;justify-content:center;margin-top:20px;">
-            <button type="submit" class="btn btn-success" style="font-size: 25px;width: 200px;">Save</button>
+        <div style="display: flex;justify-content:center;margin-top:20px;">
+            <button type="submit" id="savebtn1" class="btn btn-success"
+                style="font-size: 25px;width: 200px;">Save</button>
         </div>
     </div>
     <div class="section" id="elb" style="display:none;">
         <div class="row">
             <div class="col">
                 <h5><span><img src="{{ asset('Image/Inspection.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Inspection :</h5>
+                            style="width: 35px;height:35px;"></span> Inspection :</h5>
                 <table style="width: 80%;box-shadow:none;" id="Inspectionelb" data-title="Inspection Attitude-elbow">
                     <thead>
                         <tr>
-                            <td colspan="2" style="
+                            <td colspan="2"
+                                style="
                             text-align:center;
                             font-weight:bold;
                             background: linear-gradient(135deg, #126328 0%, rgb(103, 156, 37) 100%);
                             color: white;
-                            font-weight: 500;">Attitude :</td>
+                            font-weight: 500;">
+                                Attitude :</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -1091,11 +1122,11 @@
                             <td>
                                 <div class="checkbox-group" data-group="swelling" data-exclusive="true">
                                     <div class="checkbox-item">
-                                            <input type="checkbox" name="swelling" value="Yes">
-                                            <label for="">Yes</label>
-                                        </div>
+                                        <input type="checkbox" name="swelling" value="Yes">
+                                        <label for="">Yes</label>
+                                    </div>
                                     <div class="checkbox-item">
-                                            <input type="checkbox" name="swelling" value="No">
+                                        <input type="checkbox" name="swelling" value="No">
                                         <label for="">No</label>
                                     </div>
                                 </div>
@@ -1108,18 +1139,18 @@
                     </tbody>
                 </table>
                 <h5><span><img src="{{ asset('Image/physiotherapy.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Palpation :</h5>
+                            style="width: 35px;height:35px;"></span> Palpation :</h5>
                 <div class="form-group" data-title="Palpation-elbow">
                     <textarea placeholder="Symptoms Palpation" name="Palpation"></textarea>
                 </div>
                 <div data-title="Palpation-elbow">
                     <h6 style="margin-top: 10px;">Three Point Relation Ship:</h6>
                     <div class="checkbox-group" data-group="Three_Point_Relation_Ship" data-exclusive="true">
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Three_Point_Relation_Ship" value="Normal">
                             <label for="">Normal</label>
                         </div>
-                       <div class="checkbox-item">
+                        <div class="checkbox-item">
                             <input type="checkbox" name="Three_Point_Relation_Ship" value="Altered">
                             <label for="">Altered</label>
                         </div>
@@ -1128,7 +1159,7 @@
             </div>
             <div class="col">
                 <h5><span><img src="{{ asset('Image/stretching.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Movements :</h5>
+                            style="width: 35px;height:35px;"></span> Movements :</h5>
                 <table style="width:75%;box-shadow:none;" data-title="Movements-elbow">
                     <tbody>
                         <tr>
@@ -1154,7 +1185,7 @@
                     </tbody>
                 </table>
                 <h5><span><img src="{{ asset('Image/sample.png') }}" alt=""
-                                style="width: 35px;height:35px;"></span> Special Test :</h5>
+                            style="width: 35px;height:35px;"></span> Special Test :</h5>
                 <table style="box-shadow:none;width:75%;" data-title="Special Test-elbow">
                     <tbody>
                         <tr>
@@ -1177,35 +1208,37 @@
                 </table>
                 <div data-title="Other System Examination-elbow">
                     <h5><span><img src="{{ asset('Image/examination.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Other System Examination :</h5>
-                    <textarea  placeholder="Describe Other System Examination" style="max-width: 65%;height:65px;" name="Other_System_Examination"></textarea>
+                                style="width: 35px;height:35px;"></span> Other System Examination :</h5>
+                    <textarea placeholder="Describe Other System Examination" style="max-width: 65%;height:65px;"
+                        name="Other_System_Examination"></textarea>
                 </div>
                 <div data-title="Other System Examination-elbow">
                     <h5><span><img src="{{ asset('Image/checkup.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span> Diagnosis :</h5>
-                    <textarea  placeholder="Describe Diagnosis" style="max-width: 65%;height:65px;" name="Diagnosis"></textarea>
+                                style="width: 35px;height:35px;"></span> Diagnosis :</h5>
+                    <textarea placeholder="Describe Diagnosis" style="max-width: 65%;height:65px;" name="Diagnosis"></textarea>
                 </div>
             </div>
         </div>
         <div style="display: flex;justify-content:center;margin-top:20px;">
-            <button type="submit" class="btn btn-success" style="font-size: 25px;width: 200px;">Save</button>
+            <button type="submit" id="savebtn2" class="btn btn-success"
+                style="font-size: 25px;width: 200px;">Save</button>
         </div>
     </div>
 </form>
 <script src="{{ asset('Sweetalerts/sweetalert2.all.min.js') }}"></script>
 @php
-$regnos= optional($patDetails)->REG_NO;
-    $currentRecord = \App\Models\Opdpart::select('data','regno')
-    ->where('type', 'shoulder_elbow')
-    ->where('regno',$regnos)
+    $regnos = optional($patDetails)->REG_NO;
+    $currentRecord = \App\Models\Opdpart::select('data', 'regno')
+        ->where('type', 'shoulder_elbow')
+        ->where('regno', $regnos)
         ->whereDate('created_at', \Carbon\Carbon::today())
         ->latest()
         ->first();
 @endphp
 <script>
     if (!Object.entries) {
-        Object.entries = function (obj) {
-            return Object.keys(obj).map(function (key) {
+        Object.entries = function(obj) {
+            return Object.keys(obj).map(function(key) {
                 return [key, obj[key]];
             });
         };
@@ -1220,7 +1253,9 @@ $regnos= optional($patDetails)->REG_NO;
     }
     const allergyData = @json($allergy_data);
     let formDataFromDB = @json($currentRecord->data ?? []);
-    
+    const btn1 = document.getElementById('savebtn1');
+    const btn2 = document.getElementById('savebtn2');
+
     function toggleregion(checkbox, regionId, suppressScroll = false) {
         let section = document.getElementById(regionId);
 
@@ -1257,11 +1292,12 @@ $regnos= optional($patDetails)->REG_NO;
     });
 
     function populateForm(form, data) {
-        Object.entries(data).forEach(function ([key, field]) {
+        Object.entries(data).forEach(function([key, field]) {
             if (field && field.values) {
                 // Fill checkboxes or multi-selects
-                field.values.forEach(function (val) {
-                    var checkbox = form.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(val) + '"]');
+                field.values.forEach(function(val) {
+                    var checkbox = form.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS
+                        .escape(val) + '"]');
                     if (checkbox) {
                         checkbox.checked = true;
                         var temp = checkbox.dataset.target;
@@ -1277,7 +1313,7 @@ $regnos= optional($patDetails)->REG_NO;
                     var input = form.querySelector('[name="' + CSS.escape(key) + '"]');
                     if (input && input.type !== 'checkbox') {
                         var cleanValue = field.values[0]; // take the value as-is
-                        input.value = cleanValue;          // display exactly as stored
+                        input.value = cleanValue; // display exactly as stored
                     }
                 }
             } else {
@@ -1290,18 +1326,18 @@ $regnos= optional($patDetails)->REG_NO;
         });
     }
 
-    document.querySelectorAll('[data-group]').forEach(function (group) {
+    document.querySelectorAll('[data-group]').forEach(function(group) {
         var checkboxes = group.querySelectorAll('input[type="checkbox"]');
         var isExclusive = group.dataset && group.dataset.exclusive === "true";
 
-        checkboxes.forEach(function (checkbox) {
-            checkbox.addEventListener('change', function () {
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
                 var target = checkbox.dataset.target;
                 var relatedInput = target ? document.querySelector(target) : null;
 
                 // Exclusive group: uncheck others
                 if (isExclusive && checkbox.checked) {
-                    checkboxes.forEach(function (cb) {
+                    checkboxes.forEach(function(cb) {
                         if (cb !== checkbox) {
                             cb.checked = false;
 
@@ -1333,13 +1369,15 @@ $regnos= optional($patDetails)->REG_NO;
         });
     });
 
-    document.querySelectorAll('input[type="text"], textarea').forEach(function (input) {
-        input.addEventListener('change', function () {
+    document.querySelectorAll('input[type="text"], textarea').forEach(function(input) {
+        input.addEventListener('change', function() {
             input.value = input.value.trim();
         });
-    }); 
-    document.getElementById('shoulder_elbow').addEventListener('submit', function (e) {
+    });
+    document.getElementById('shoulder_elbow').addEventListener('submit', function(e) {
         e.preventDefault();
+        btn1.disabled = true;
+        btn2.disabled = true;
         var json = getFormDataAsJSON(this); // <-- works because 'this' is the form
         if (!json) return;
 
@@ -1352,24 +1390,28 @@ $regnos= optional($patDetails)->REG_NO;
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            success: function (response) {
+            success: function(response) {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success',
                     allowOutsideClick: false,
                     text: response.message || 'Form submitted successfully!',
                     confirmButtonText: 'OK'
-                }).then(function () {
+                }).then(function() {
                     window.location.reload();
                 });
             },
-            error: function (xhr) {
-                var message = xhr.responseJSON && xhr.responseJSON.message ? xhr.responseJSON.message : 'Something went wrong!';
+            error: function(xhr) {
+                var message = xhr.responseJSON && xhr.responseJSON.message ? xhr.responseJSON
+                    .message : 'Something went wrong!';
                 Swal.fire({
                     icon: 'error',
                     allowOutsideClick: false,
                     title: 'Oops...',
                     text: message
+                }).then(() => {
+                    btn1.disabled = false;
+                    btn2.disabled = false;
                 });
             }
         });
@@ -1384,9 +1426,10 @@ $regnos= optional($patDetails)->REG_NO;
             var key = pair[0];
             var value = pair[1];
             if (!value) continue;
-            
-            var inputEl = formElement.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(value) + '"]') 
-                || formElement.querySelector('[name="' + CSS.escape(key) + '"]');
+
+            var inputEl = formElement.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(value) +
+                    '"]') ||
+                formElement.querySelector('[name="' + CSS.escape(key) + '"]');
 
             if (inputEl && inputEl.type === "checkbox" && inputEl.dataset.target) {
                 var relatedInput = document.querySelector(inputEl.dataset.target);
@@ -1397,7 +1440,7 @@ $regnos= optional($patDetails)->REG_NO;
                         allowOutsideClick: false,
                         title: 'Required Field Missing',
                         text: (errorname || 'This field') + ' is required.',
-                    }).then(function () {
+                    }).then(function() {
 
                         // Detect which section it belongs to and open it (without scroll)
                         if (relatedInput.closest('#should')) {
@@ -1450,7 +1493,8 @@ $regnos= optional($patDetails)->REG_NO;
             }
         }
 
-        var patientName = document.getElementById('patient_name') ? document.getElementById('patient_name').value.trim() : '';
+        var patientName = document.getElementById('patient_name') ? document.getElementById('patient_name').value
+        .trim() : '';
         var regno = document.getElementById('regno') ? document.getElementById('regno').value.trim() : '';
         var age = document.getElementById('age') ? document.getElementById('age').value.trim() : '';
         var sex = document.getElementById('sex') ? document.getElementById('sex').value.trim() : '';
@@ -1461,6 +1505,9 @@ $regnos= optional($patDetails)->REG_NO;
                 allowOutsideClick: false,
                 title: 'No fields selected!',
                 text: 'Please select at least one field and fill in related values if required.',
+            }).then(() => {
+                btn1.disabled = false;
+                btn2.disabled = false;
             });
             return null;
         }

@@ -208,6 +208,7 @@
             grid-template-columns: 1fr;
             gap: 20px;
         }
+
         .checkbox-group {
             flex-direction: column;
             gap: 10px;
@@ -723,7 +724,7 @@
 
                 <div data-title="Past Surgical History">
                     <h5><span><img src="{{ asset('Image/health-report.png') }}" alt=""
-                            style="width: 35px;height:35px;"></span>PAST SURGICAL HISTORY</h5>
+                                style="width: 35px;height:35px;"></span>PAST SURGICAL HISTORY</h5>
                     <div class="checkbox-group">
                         <div class="checkbox-item">
                             <input type="checkbox" name="Past_surgical_history" value="none">
@@ -1215,7 +1216,8 @@
         </div>
 
         <div style="display: flex;justify-content:center;margin-top:20px;">
-            <button type="submit" class="btn btn-success" style="font-size: 25px;width: 200px;">Save</button>
+            <button type="submit" id="savebtn" class="btn btn-success"
+                style="font-size: 25px;width: 200px;">Save</button>
         </div>
     </div>
 
@@ -1228,10 +1230,10 @@
 
 <script src="{{ asset('Sweetalerts/sweetalert2.all.min.js') }}"></script>
 @php
-$regnos= optional($patDetails)->REG_NO;
-    $currentRecord = \App\Models\Opdpart::select('data','regno')
+    $regnos = optional($patDetails)->REG_NO;
+    $currentRecord = \App\Models\Opdpart::select('data', 'regno')
         ->where('type', 'spine')
-        ->where('regno',$regnos)
+        ->where('regno', $regnos)
         ->whereDate('created_at', \Carbon\Carbon::today())
         ->latest()
         ->first();
@@ -1239,8 +1241,8 @@ $regnos= optional($patDetails)->REG_NO;
 <script>
     // Polyfill for Object.entries (for Safari < 10.1)
     if (!Object.entries) {
-        Object.entries = function (obj) {
-            return Object.keys(obj).map(function (key) {
+        Object.entries = function(obj) {
+            return Object.keys(obj).map(function(key) {
                 return [key, obj[key]];
             });
         };
@@ -1255,17 +1257,19 @@ $regnos= optional($patDetails)->REG_NO;
     }
     const allergyData = @json($allergy_data);
     let formDataFromDB = @json($currentRecord->data ?? []);
+    const btn = document.getElementById('savebtn');
 
     document.addEventListener('DOMContentLoaded', () => {
         populateForm(document.getElementById('myspine'), formDataFromDB);
     });
 
     function populateForm(form, data) {
-        Object.entries(data).forEach(function ([key, field]) {
+        Object.entries(data).forEach(function([key, field]) {
             if (field && field.values) {
                 // Fill checkboxes or multi-selects
-                field.values.forEach(function (val) {
-                    var checkbox = form.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(val) + '"]');
+                field.values.forEach(function(val) {
+                    var checkbox = form.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS
+                        .escape(val) + '"]');
                     if (checkbox) {
                         checkbox.checked = true;
                         var temp = checkbox.dataset.target;
@@ -1281,7 +1285,7 @@ $regnos= optional($patDetails)->REG_NO;
                     var input = form.querySelector('[name="' + CSS.escape(key) + '"]');
                     if (input && input.type !== 'checkbox') {
                         var cleanValue = field.values[0]; // take the value as-is
-                        input.value = cleanValue;          // display exactly as stored
+                        input.value = cleanValue; // display exactly as stored
                     }
                 }
             } else {
@@ -1344,6 +1348,7 @@ $regnos= optional($patDetails)->REG_NO;
 
     document.getElementById('myspine').addEventListener('submit', function(e) {
         e.preventDefault();
+        btn.disabled = true;
         const json = getFormDataAsJSON(this); // <-- works because 'this' is the form
         if (!json) return;
 
@@ -1374,6 +1379,8 @@ $regnos= optional($patDetails)->REG_NO;
                     allowOutsideClick: false,
                     title: 'Oops...',
                     text: message
+                }).then(() => {
+                    btn.disabled = false;
                 });
             }
         });
@@ -1389,8 +1396,9 @@ $regnos= optional($patDetails)->REG_NO;
             var value = pair[1];
             if (!value) continue;
 
-            var inputEl = formElement.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(value) + '"]') 
-                || formElement.querySelector('[name="' + CSS.escape(key) + '"]');
+            var inputEl = formElement.querySelector('[name="' + CSS.escape(key) + '"][value="' + CSS.escape(value) +
+                    '"]') ||
+                formElement.querySelector('[name="' + CSS.escape(key) + '"]');
 
             if (inputEl && inputEl.type === "checkbox" && inputEl.dataset.target) {
                 var relatedInput = document.querySelector(inputEl.dataset.target);
@@ -1401,7 +1409,7 @@ $regnos= optional($patDetails)->REG_NO;
                         allowOutsideClick: false,
                         title: 'Required Field Missing',
                         text: (errorname || 'This field') + ' is required.',
-                    }).then(function () {
+                    }).then(function() {
                         // Scroll to input
                         relatedInput.scrollIntoView({
                             behavior: "smooth",
@@ -1445,7 +1453,8 @@ $regnos= optional($patDetails)->REG_NO;
             }
         }
 
-        var patientName = document.getElementById('patient_name') ? document.getElementById('patient_name').value.trim() : '';
+        var patientName = document.getElementById('patient_name') ? document.getElementById('patient_name').value
+        .trim() : '';
         var regno = document.getElementById('regno') ? document.getElementById('regno').value.trim() : '';
         var age = document.getElementById('age') ? document.getElementById('age').value.trim() : '';
         var sex = document.getElementById('sex') ? document.getElementById('sex').value.trim() : '';
@@ -1457,6 +1466,8 @@ $regnos= optional($patDetails)->REG_NO;
                 title: 'No fields selected!',
                 allowOutsideClick: false,
                 text: 'Please select at least one field and fill in related values if required.',
+            }).then(() => {
+                btn.disabled = false;
             });
             return null;
         }
