@@ -167,7 +167,7 @@
 
         {{-- Include sub pages --}}
         @if ($view === 'acute')
-            <h1>Acute</h1>
+            @include('doctpanel.trauma.trauma_acute')
         @elseif($view === 'acute-primary')
             <h1>acute-primary</h1>
         @elseif($view === 'late-presentation')
